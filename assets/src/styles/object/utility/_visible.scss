@@ -1,0 +1,46 @@
+.u-visible {
+	display: block;
+	&_inline {
+		display: inline;
+	}
+}
+
+.u-hidden {
+	display: none;
+}
+
+.u-visible-medium-up {
+	display: none;
+	@media #{$medium-up} {
+		display: block;
+		&_inline {
+			display: inline;
+		}
+	}
+}
+
+.u-hidden-medium-up {
+	@media #{$medium-up} {
+		display: none;
+	}
+}
+
+
+.u-visible-large-up {
+	display: none;
+	@media #{$large-up} {
+		display: block;
+		&_inline {
+			display: inline;
+		}
+	}
+}
+
+.u-hidden-large-up {
+	@media #{$large-up} {
+		display: none;
+	}
+}
+
+
+

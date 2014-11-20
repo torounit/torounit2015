@@ -1,0 +1,61 @@
+
+.p-article {
+	margin-top: 0;
+	&__header {
+		padding-top: 10px;
+	}
+
+	&__title {
+		margin: 0.2em 0;
+		font-size: 2.3rem;
+		font-weight: normal;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	&__terms {
+		text-align: center;
+		margin: 0.2em 0;
+
+		a {
+			display: inline-block;
+			font-size: 1.2rem;
+			color: #333;
+			text-decoration: none;
+			margin:0 0px;
+			background-color: #eee;
+			padding: 1px 5px;
+			border-radius: 3px;
+
+			&::before {
+				@include fa();
+				content: "\f02b";
+				margin-right: 2px;
+			}
+		}
+
+		&_category {
+			a {
+				color: #FFF;
+				background-color: #000;
+
+				&::before {
+					content: "\f07c";
+				}
+			}
+		}
+
+	}
+
+	&__pubDate {
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	&__body {
+		margin-top: 40px;
+	}
+}

@@ -1,0 +1,26 @@
+.p-nav {
+	float: right;
+	display: table;
+	margin: 0;
+	padding: 0;
+	&__item {
+		margin: 0;
+		padding: 1px;
+		display: table-cell;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		text-align: center;
+		vertical-align: middle;
+
+		a {
+			box-sizing: border-box;
+			color: inherit;
+			display: block;
+			width: 100%;
+			height: 100%;
+			vertical-align: middle;
+
+		}
+	}
+}

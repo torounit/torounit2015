@@ -1,0 +1,22 @@
+.c-media {
+
+	&__image,
+	&__body {
+		display: table-cell;
+  		vertical-align: middle;
+  		p {
+  			margin-top: 0;
+  			margin-bottom: 0.5em;
+  		}
+	}
+
+	&__image {
+		padding-right: 20px;
+	}
+
+	&__heading {
+		margin-top: 0;
+		text-align: left;
+		margin-bottom: 5px;
+	}
+}

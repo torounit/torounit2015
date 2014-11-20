@@ -1,0 +1,37 @@
+.p-menu {
+
+	font-size: 1.3rem;
+	&__items {
+		padding: 0;
+		margin-top: 0;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 30px;
+
+	}
+
+	.children {
+		padding-left: 20px;
+	}
+
+	li {
+		border-top: 1px solid #eee;
+		display: block;
+
+		a {
+			padding: 5px 20px;
+			display: block;
+			position: relative;
+
+			&::after {
+				@include fa();
+				content: "\f105";
+				position: absolute;
+				right: 20px;
+				top: 50%;
+			 	transform: translateY(-50%);
+
+			}
+		}
+
+	}
+}

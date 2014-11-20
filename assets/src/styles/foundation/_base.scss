@@ -1,0 +1,190 @@
+@charset "UTF-8";
+// Typography
+//
+// Typography
+//
+// Markup:
+// Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+// tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+// quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+// consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+// cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+// proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+//
+// Styleguide 1.0
+
+
+html {
+	font-size: percentage($root-font-size / $ua-font-size);
+}
+
+
+
+body {
+	font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size: 1.5em;
+	line-height: 1.8;
+	color: #333;
+	@include pie-clearfix();
+	letter-spacing: 0.05rem;
+	background: #fafafa;
+
+}
+
+
+pre {
+	padding: 10px;
+	background: #fafafa;
+	font-size: 1.3rem;
+	line-height: 1.1;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	overflow: auto;
+	color: #222;
+}
+
+a {
+	text-decoration: none;
+	color: #BA3333;
+}
+
+// Heading
+//
+// Heading Base Style
+//
+// Markup:
+// <h1>Title</h1>
+// <h2>Title</h2>
+// <h3>Title</h3>
+// <h4>Title</h4>
+// <h5>Title</h5>
+// <h6>Title</h6>
+//
+// Styleguide 1.1
+
+
+h1,h2,h3,h4,h5,h6 {
+	color: inherit;
+	text-align: center;
+
+}
+
+h1 {
+	font-size: 1.8em;
+	margin: 0.8em 0 0.4em;
+}
+
+h2,
+article section h1 {
+	font-size: 1.4em;
+	margin: 1.2em 0;
+	font-weight: normal;
+	&::before {
+		content: image-url("section.svg");
+		opacity: 0.1;
+		display: block;
+		margin: 2.5em auto 0.3em;
+	}
+}
+
+h3,
+article section h2 {
+	font-size: 1.2em;
+	margin: 1.2em 0 0.6em;
+}
+
+h4,
+article section h3  {
+	font-size: 1.2em;
+	margin: 1.2em 0 0.6em;
+}
+
+h5,
+article section h4 {
+	font-size: 1em;
+	margin: 1.5em 0 0.8em;
+}
+
+h6,
+article section h5 {
+	font-size: 0.9em;
+	margin: 1.6em 0 1em;
+}
+
+
+iframe,
+img {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+ul {
+	list-style-type: square;
+}
+
+table {
+	width: 100%;
+	margin: 1em 0;
+}
+
+th,
+td {
+	border-top: 1px solid rgba(#333, .1);
+	border-bottom: 1px solid rgba(#333, .1);
+	padding: 10px 0;
+	text-align: left;
+	padding: 10px 5px;
+	color: inherit;
+}
+
+strong {
+	background-image: linear-gradient(transparent 0, transparent 60%, rgba(#aaa, 0.2) 60%, rgba(#aaa,0.2) 100%);
+}
+
+hr {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	margin-bottom: 3.2em;
+	padding-top: 3.2em;
+	clear: both;
+	border-width: 0 0 1px 0;
+}
+
+blockquote {
+	background-color: #fafafa;
+	padding: 20px;
+	border-left: 4px solid #CCC;
+
+}
+
+#tinymce {
+	padding: 20px !important;
+}
+
+input:not([type="radio"]),
+textarea,
+select {
+	box-sizing: border-box;
+	position: relative;
+	padding: 7px;
+	font-size: 1.5rem;
+	vertical-align: middle;
+	background: #fff;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+}
+
+
+textarea {
+	height: auto;
+	max-width: 100%;
+	padding: 5px 7px;
+}
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+
+
+
+.p-postList {
+		padding: 0;
+		margin-top: 2em;
+
+	&__item {
+		list-style: none;
+		position: relative;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		a {
+			padding: 5px 10px;
+		}
+	}
+
+	&__pubdate {
+		font-size: 11px;
+		font-family: "Roboto";
+	}
+}

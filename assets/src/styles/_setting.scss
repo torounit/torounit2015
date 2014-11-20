@@ -1,0 +1,24 @@
+$ua-font-size: 16px;
+$root-font-size: 10px;
+
+$gutter-small: 20px;
+$gutter: 20px;
+
+// Media Queries
+$screen-small-min: 0px;
+$screen-medium-min: 768px;
+$screen-large-min: 1000px;
+
+$screen-small-max: $screen-medium-min - 1px;
+$screen-medium-max: $screen-large-min - 1px;
+
+$screen: "only screen" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width: #{$screen-small-max})" !default;
+
+$medium-up: "#{$screen} and (min-width:#{$screen-medium-min})" !default;
+$medium-only: "#{$screen} and (min-width:#{$screen-medium-min}) and (max-width:#{$screen-medium-max})" !default;
+
+$large-up: "#{$screen} and (min-width:#{$screen-large-min})" !default;
+$large-only: "#{$screen} and (min-width:#{$screen-large-min})" !default;
