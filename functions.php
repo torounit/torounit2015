@@ -82,7 +82,7 @@ add_filter( "template_include", function($template){
 
 
 add_filter( 'jetpack_open_graph_image_default', function( $image ) {
-    $image = "http://www.gravatar.com/avatar/".md5( strtolower( trim( get_the_author_meta('user_email') )))."?s=256";
+    $image = "http://www.gravatar.com/avatar/".md5( strtolower( trim( get_option('admin_email') )))."?s=256";
     return $image;
 } );
 
