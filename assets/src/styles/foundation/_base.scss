@@ -16,12 +16,21 @@
 
 html {
 	font-size: percentage($root-font-size / $ua-font-size);
+
 }
 
 
 
 body {
 	font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	text-align: justify;
+
+	// text-rendering: optimizeLegibility;
+	// font-feature-settings: "kern";
+	// -webkit-font-feature-settings: "kern";
+	// -moz-font-feature-settings: "kern";
+	// -moz-font-feature-settings: "kern=1";
+
 	font-size: 1.5em;
 	line-height: 1.8;
 	color: #333;
@@ -90,13 +99,13 @@ article section h1 {
 h3,
 article section h2 {
 	font-size: 1.2em;
-	margin: 1.2em 0 0.6em;
+	margin: 1.8em 0 0.6em;
 }
 
 h4,
 article section h3  {
 	font-size: 1.2em;
-	margin: 1.2em 0 0.6em;
+	margin: 1.5em 0 0.6em;
 }
 
 h5,
