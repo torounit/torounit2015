@@ -2,7 +2,7 @@
 
         <aside class="p-profile c-media" itemprop="creator" itemscope itemtype="http://schema.org/Person">
             <div class="c-media__image">
-                <?php echo get_avatar( get_the_author_meta('user_email'), 150 );?>
+                <?php echo get_avatar( get_option('admin_email'), 150 );?>
             </div>
             <div class="c-media__body">
                 <h3 class="p-profile__title c-media__heading">Toro_Unit</h3>
