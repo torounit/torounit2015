@@ -79,6 +79,11 @@ add_filter( "template_include", function($template){
     return $template;
 });
 
+add_filter("post_class", function($classes){
+    $hentry = array_search('hentry',$classes);
+    array_splice($classes,$hentry,1);
+    return $classes;
+});
 
 
 add_filter( 'jetpack_open_graph_image_default', function( $image ) {
