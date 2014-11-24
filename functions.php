@@ -72,12 +72,7 @@ Class Helper {
 
 
 
-add_filter( "template_include", function($template){
-    if(is_home() or is_search()) {
-        $template = get_archive_template();
-    }
-    return $template;
-});
+
 
 add_filter("post_class", function($classes){
     $hentry = array_search('hentry',$classes);
