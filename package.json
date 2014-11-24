@@ -6,10 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "author": "Toro_Unit",
   "license": "GPL v2 or later",
-
   "browserify-shim": {
     "jquery": "global:jQuery",
     "underscore": "global:_"
@@ -27,12 +25,10 @@
     "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-connect": "^0.9.0",
     "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-imagemin": "^0.9.2",
     "grunt-contrib-uglify": "^0.4.1",
     "grunt-este-watch": "^0.1.17",
     "grunt-ftpush": "^0.3.3",
-    "grunt-image": "^0.8.5",
     "grunt-sass": "^0.16.1"
   }
-
-
 }

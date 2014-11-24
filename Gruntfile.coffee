@@ -174,20 +174,11 @@ module.exports = (grunt) ->
     #
     # ==================================
 
-    image:
+    imagemin:
       dynamic:
         options:
-          pngquant: true
-          optipng: true
-          advpng: true
-          zopflipng: true
-          pngcrush: true
-          pngout: true
-          mozjpeg: true
-          jpegRecompress: true
-          jpegoptim: true
-          gifsicle: true
-          svgo: true
+
+          svgoPlugins: [{ removeViewBox: false }],
 
         files: [
           expand: true
@@ -195,8 +186,6 @@ module.exports = (grunt) ->
           src: ["**/*.{png,jpg,gif,svg}"]
           dest: "<%= dir.assets %>/dist/images/"
         ]
-
-
 
     # ==================================
     #
@@ -221,5 +210,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['esteWatch']
   grunt.registerTask 'build', ["sass:dev","autoprefixer",'browserify']
-  grunt.registerTask 'build:dist', ["sass:dist","autoprefixer", 'cssmin','browserify', "uglify", "image"]
+  grunt.registerTask 'build:dist', ["sass:dist","autoprefixer", 'cssmin','browserify', "uglify", "imagemin"]
   grunt.registerTask 'deploy', ["build:dist","ftpush"]
