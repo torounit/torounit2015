@@ -22,7 +22,8 @@
                 <div class="l-grid">
                     <?php
                     $plugin_page = get_page_by_path("plugins");
-                    $plugins = new WP_Query(["post_parent" => $plugin_page->ID,"post_type" => "page"]);
+                    $pageID = $plugin_page ? $plugin_page->ID: 0;
+                    $plugins = new WP_Query(["post_parent" => $pageID,"post_type" => "page"]);
                     while ($plugins->have_posts()):
                         $plugins->the_post();
                     ?>
