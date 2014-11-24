@@ -5,11 +5,7 @@
 
                 <article <?php post_class("p-article c-card");?>  itemscope itemtype="http://schema.org/Article">
                     <header class="p-article__header">
-                        <?php if(is_single()):?>
-                            <p class="p-article__pubDate"><i class="fa fa-clock-o"></i> <time datetime="<?php the_time("Y-m-d");?>" itemprop="datePublished" content="<?php the_time("Y-m-d");?>"><?= date("F d, Y", get_the_time("U"));?></time></p>
-                        <?php endif;?>
                         <h1 class="p-article__title" itemprop="headline"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-                        <p class="u-text-center" itemprop="keywords"><span class="p-article__terms p-article__terms_category"><?php the_category(" ");?></span> <?php if (has_tag()):?><span class="p-article__terms"><?php the_tags(""," ","");?></span><?php endif;?></p>
                     </header>
 
 
