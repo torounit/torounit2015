@@ -29,6 +29,7 @@
     "grunt-contrib-uglify": "^0.4.1",
     "grunt-este-watch": "^0.1.17",
     "grunt-ftpush": "^0.3.3",
+    "grunt-githooks": "^0.3.1",
     "grunt-sass": "^0.16.1"
   }
 }

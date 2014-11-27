@@ -59,23 +59,11 @@ module.exports = (grunt) ->
       coffee: (filepath) ->
         return ["browserify"]
 
-      php: (filepath) ->
-        return ["ftpush"]
-
-      # css: (filepath) ->
-      #   return ["ftpush"]
-
-      # js: (filepath) ->
-      #   return ["ftpush"]
-
-
-
     }
 
     # ==================================
     #
-    # Compass
-    # use config.rb.
+    # ftpush
     #
     # ==================================
 
@@ -94,6 +82,27 @@ module.exports = (grunt) ->
         useList: false
       }
     }
+
+
+    # ==================================
+    #
+    # grunt-githooks.
+    #
+    # ==================================
+
+    githooks: {
+      options: {
+        dest: '.git/hooks',
+        hashbang: '#!/bin/bash',
+        template: './shell.hb',
+        startMarker: '## GRUNT-GRUNTHOOKS START',
+        endMarker: '## GRUNT-GRUNTHOOKS END'
+      },
+      setup: {
+        'pre-push': 'deploy'
+      }
+    }
+
 
 
     # ==================================
