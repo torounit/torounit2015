@@ -38,8 +38,8 @@
         <div class="l-row l-row_tightly">
             <div class="l-WPHeader__nav">
                 <ul class="p-nav">
-                    <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-search"><i class="fa fa-search"></i></a></li>
-                    <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-menu"><i class="fa fa-bars"></i></a></li>
+                    <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-search" title="search"><i class="fa fa-search"></i></a></li>
+                    <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-menu" title="menu"><i class="fa fa-bars"></i></a></li>
                 </ul>
             </div>
         </div>
