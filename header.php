@@ -62,7 +62,7 @@
 
 
         <div class="l-row">
-            <h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img src="<?=Helper::getImageURI("torounit.svg");?>" alt=""></a></h1>
+            <h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img src="<?=Helper::getImageURI("torounit.svg");?>" alt="Toro_Unit"></a></h1>
         </div>
     </header>
 
