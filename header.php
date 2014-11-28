@@ -2,7 +2,7 @@
 <html lang="ja" itemscope <?php if(!is_search()):?>itemtype="http://schema.org/WebPage"<?php else:?>itemtype="http://schema.org/SearchResultsPage"<?php endif;?>>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, user-scalable=yes">
     <title><?php Helper::title();bloginfo('name');?></title>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//cdn.api.twitter.com/">
