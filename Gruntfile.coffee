@@ -54,7 +54,7 @@ module.exports = (grunt) ->
           enabled: true
 
       scss: (filepath) ->
-        return ["sass:dev","autoprefixer","ftpush"]
+        return ["sass:dev","autoprefixer"]
 
       coffee: (filepath) ->
         return ["browserify"]
