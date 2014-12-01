@@ -45,21 +45,24 @@
             </div>
         </div>
 
-        <div class="p-search js-search l-row u-hidden">
-            <form action="/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-                <meta itemprop="target" content="http://www.torounit.com/?s={s}">
-                <input type="search" id="s" name="s" value="" class="p-search__input" placeholder="Search..." itemprop="query-input">
-            </form>
+        <div class="js-search l-row c-slidemenu">
+            <div class="p-search">
+                <form action="/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                    <meta itemprop="target" content="http://www.torounit.com/?s={s}">
+                    <input type="search" id="s" name="s" value="" class="p-search__input" placeholder="Search..." itemprop="query-input">
+                </form>
+            </div>
         </div>
 
-
-        <nav class="p-menu js-menu u-hidden" itemscope itemtype="SiteNavigationElement">
-            <div class="l-row l-row_tightly">
-                <ul class="p-menu__items">
-                    <?php wp_list_pages('title_li='); ?>
-                </ul>
-            </div>
-        </nav>
+        <div class="js-menu c-slidemenu">
+            <nav class="p-menu" itemscope itemtype="SiteNavigationElement">
+                <div class="l-row l-row_tightly">
+                    <ul class="p-menu__items">
+                        <?php wp_list_pages('title_li='); ?>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
 
         <div class="l-row">

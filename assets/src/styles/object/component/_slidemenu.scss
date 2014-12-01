@@ -1,0 +1,9 @@
+.c-slidemenu {
+	height: 0;
+	overflow: hidden;
+	transition: height 200ms ease-out 0;
+
+	&.is-open {
+		height: auto;
+	}
+}
