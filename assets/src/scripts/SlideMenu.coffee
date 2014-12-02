@@ -25,6 +25,7 @@ module.exports = class SlideMenu
         @$target.height(height)
 
     close: ->
+        @$target.removeClass("is-open")
         @$target.height(0)
 
 
