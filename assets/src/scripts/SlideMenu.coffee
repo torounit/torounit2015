@@ -5,7 +5,6 @@ module.exports = class SlideMenu
         @$el = $el
         @state = false
         @$target = $ @$el.data("slidemenu-target")
-        @$target.height(0)
         @on()
 
     on: ->
@@ -17,16 +16,23 @@ module.exports = class SlideMenu
             else
                 @close()
 
+        @$target.on "webkitTransitionEnd transitionEnd", @transitionEnd
+
+    transitionEnd: =>
+        console.log "end"
+        @$target.height("")
+
     open: ->
         @$target.addClass("is-open")
-        @$target.height("")
         height = @$target.height()
         @$target.height(0)
         @$target.height(height)
 
     close: ->
-        @$target.removeClass("is-open")
+        height = @$target.height()
+        @$target.height(@$target.height())
         @$target.height(0)
+        @$target.removeClass("is-open")
 
 
     @init: ()->
