@@ -3,6 +3,7 @@ module.exports = class SlideMenu
 
     constructor: ($el)->
         @$el = $el
+        @state = false
         @$target = $ @$el.data("slidemenu-target")
         @$target.height(0)
         @on()
@@ -10,13 +11,14 @@ module.exports = class SlideMenu
     on: ->
         @$el.click (event) =>
             event.preventDefault()
-            @$target.toggleClass("is-open")
-            if @$target.hasClass("is-open")
+            @state = !@state
+            if @state
                 @open()
             else
                 @close()
 
     open: ->
+        @$target.addClass("is-open")
         @$target.height("")
         height = @$target.height()
         @$target.height(0)
