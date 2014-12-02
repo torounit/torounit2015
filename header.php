@@ -35,36 +35,36 @@
     </script>
 <?php }?>
 <div class="l-viewport">
-    <header class="l-WPHeader" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="l-row l-row_tightly">
-            <div class="l-WPHeader__nav">
-                <ul class="p-nav">
-                    <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-search" title="search"><i class="fa fa-search"></i></a></li>
-                    <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-menu" title="menu"><i class="fa fa-bars"></i></a></li>
+
+    <div class="l-row l-row_tightly">
+        <div class="l-navbar">
+            <ul class="p-nav">
+                <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-search" title="search"><i class="fa fa-search"></i></a></li>
+                <li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-menu" title="menu"><i class="fa fa-bars"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="js-search l-row c-slidemenu">
+        <div class="p-search">
+            <form action="/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                <meta itemprop="target" content="http://www.torounit.com/?s={s}">
+                <input type="search" id="s" name="s" value="" class="p-search__input" placeholder="Search..." itemprop="query-input">
+            </form>
+        </div>
+    </div>
+
+    <div class="js-menu c-slidemenu">
+        <nav class="p-menu" itemscope itemtype="SiteNavigationElement">
+            <div class="l-row l-row_tightly">
+                <ul class="p-menu__items">
+                    <?php wp_list_pages('title_li='); ?>
                 </ul>
             </div>
-        </div>
+        </nav>
+    </div>
 
-        <div class="js-search l-row c-slidemenu">
-            <div class="p-search">
-                <form action="/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-                    <meta itemprop="target" content="http://www.torounit.com/?s={s}">
-                    <input type="search" id="s" name="s" value="" class="p-search__input" placeholder="Search..." itemprop="query-input">
-                </form>
-            </div>
-        </div>
-
-        <div class="js-menu c-slidemenu">
-            <nav class="p-menu" itemscope itemtype="SiteNavigationElement">
-                <div class="l-row l-row_tightly">
-                    <ul class="p-menu__items">
-                        <?php wp_list_pages('title_li='); ?>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-
-
+    <header class="l-WPHeader" itemscope itemtype="http://schema.org/WPHeader">
         <div class="l-row">
             <h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img src="<?=Helper::getImageURI("torounit.svg");?>" alt="Toro_Unit"></a></h1>
         </div>

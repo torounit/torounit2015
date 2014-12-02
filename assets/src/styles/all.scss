@@ -7,7 +7,9 @@
 @import "foundation/base";
 
 @import "layout/row";
-@import "layout/_WPHeader.scss";
+@import "layout/WPHeader";
+@import "layout/navbar";
+
 @import "layout/main";
 @import "layout/grid";
 
