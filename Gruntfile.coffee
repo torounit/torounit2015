@@ -171,9 +171,9 @@ module.exports = (grunt) ->
           '<%= dir.javascripts %>/all.js': ['<%= dir.coffee %>/all.coffee']
         options:
           transform: ['coffeeify', "browserify-shim", "debowerify" ]
-          debug: true
           browserifyOptions:
             extensions: ['.coffee']
+            debug: true
 
 
     # ==================================
