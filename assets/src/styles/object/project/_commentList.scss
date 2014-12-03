@@ -1,0 +1,58 @@
+.p-commentList {
+
+	margin: 0 0 2em;
+	padding-left: 0;
+
+	li {
+		list-style: none;
+
+	}
+
+	.comment {
+
+		.comment-body {
+			border-top: 1px solid #CCC;
+			padding-top: 2em;
+			margin-bottom: 2em;
+		}
+
+		.says {
+			display: none;
+		}
+
+		.comment-author,
+		.comment-metadata,
+		.comment-content,
+		.reply {
+			padding-left: 50px;
+		}
+
+		.comment-metadata,
+		.comment-reply-link,
+		.comment-reply-login {
+			font-size: 0.8em;
+
+		}
+
+		.comment-reply-link,
+		.comment-reply-login {
+			&::before {
+				@include fa();
+				content: "\f112";
+			}
+		}
+
+		.comment-author {
+			position: relative;
+		}
+
+		.avatar {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 40px;
+			height: auto;
+		}
+
+	}
+}
