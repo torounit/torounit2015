@@ -16,11 +16,12 @@ module.exports = class SlideMenu
             else
                 @close()
 
-        @$target.on "webkitTransitionEnd transitionEnd", @transitionEnd
+        @$target.on "webkitTransitionEnd transitionEnd", @resetHeight
 
-    transitionEnd: =>
-        console.log "end"
-        @$target.height("")
+
+    resetHeight: =>
+        @$target.height(null)
+
 
     open: ->
         @$target.addClass("is-open")
