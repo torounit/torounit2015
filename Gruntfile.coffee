@@ -78,7 +78,7 @@ module.exports = (grunt) ->
         dest: '/wp-content/themes/torounit2015',
         exclusions: ['.*','node_modules/*','.sass-cache/']
         keep: [],
-        simple: true,
+        simple: false,
         useList: false
       }
     }
