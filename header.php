@@ -70,8 +70,6 @@
         </div>
     </header>
 
-    <div class="">
-        <div class="p-breadcrumbs l-row" itemprop="breadcrumb">
-            <?php if ( function_exists( 'bread_crumb' ) ) bread_crumb( ["type" => "string", "home_label" => '<i class="fa fa-home"></i>'] ); ?>
-        </div>
-    </div>
+    <nav class="p-breadcrumbs l-row" itemprop="breadcrumb">
+        <?php if ( function_exists( 'bread_crumb' ) ) bread_crumb( ["type" => "string", "home_label" => '<i class="fa fa-home"></i>'] ); ?>
+    </nav>
