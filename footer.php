@@ -1,4 +1,4 @@
-    <footer class="l-WPFooter l-row" itemtype="http://schema.org/WPFooter">
+    <footer class="l-WPFooter l-row" itemscope itemtype="http://schema.org/WPFooter">
 
         <aside class="p-profile c-media" itemprop="creator" itemscope itemtype="http://schema.org/Person">
             <div class="c-media__image">
