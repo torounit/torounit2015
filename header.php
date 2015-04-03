@@ -55,7 +55,7 @@
     </div>
 
     <div class="js-menu c-slidemenu">
-        <nav class="p-menu" itemscope itemtype="SiteNavigationElement">
+        <nav class="p-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
             <div class="l-row l-row_tightly">
                 <ul class="p-menu__items">
                     <?php wp_list_pages('title_li='); ?>
