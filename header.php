@@ -43,9 +43,9 @@
 		<div class="l-navbar">
 			<ul class="p-nav">
 				<li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-search" title="search"><i
-							class="fa fa-search"></i></a></li>
+							class="fa fa-search fa-lg"></i></a></li>
 				<li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-menu" title="menu"><i
-							class="fa fa-bars"></i></a></li>
+							class="fa fa-bars fa-lg"></i></a></li>
 			</ul>
 		</div>
 	</div>
