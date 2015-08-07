@@ -3,7 +3,7 @@
 		<main class="l-main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
 			<section class="c-card">
-				<h1 class="u-text-center"><span class="dashicons dashicons-admin-post"></span> Blog</h1>
+				<h1 class="u-text-center"><a href="/blog" class="u-text-color-inherit"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
 				<ul class="p-postList" itemscope itemtype="http://schema.org/Blog">
 					<?php
 					$blog = new WP_Query( [ "posts_per_page" => 10 ] );
@@ -22,7 +22,7 @@
 			</section>
 
 			<section class="c-card">
-				<h1 class="u-text-center"><span class="dashicons dashicons-admin-plugins"></span> Plugins</h1>
+				<h1 class="u-text-center"><a href="/plugins" class="u-text-color-inherit"><span class="dashicons dashicons-admin-plugins"></span> Plugins</a></h1>
 
 				<div class="l-grid">
 					<?php
