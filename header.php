@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, user-scalable=yes">
-	<title><?php Helper::title();
-		bloginfo( 'name' ); ?></title>
+	<meta name="twitter:widgets:csp" content="on">
+	<title><?php Helper::title(); bloginfo( 'name' ); ?></title>
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="//a.disquscdn.com">
 	<link rel="dns-prefetch" href="//apis.google.com">
@@ -15,7 +15,6 @@
 	<link rel="dns-prefetch" href="//www.facebook.com">
 	<link rel="dns-prefetch" href="//platform.twitter.com">
 	<link rel="dns-prefetch" href="//cdn-ak.b.st-hatena.com">
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo( 'rss2_url' ); ?>">
 	<link rel="start" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'url' ); ?>">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="shortcut icon" href="<?php bloginfo( "stylesheet_directory" ); ?>/favicon.ico"
