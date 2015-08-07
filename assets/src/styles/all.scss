@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@import "compass";
+
 @import "_setting";
 @import "_mixin";
-@import "normalize";
+//@import "../../../node_modules/inuit-normalize/generic.normalize";
 @import "foundation/base";
 
 @import "layout/row";

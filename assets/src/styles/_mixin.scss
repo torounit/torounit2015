@@ -15,3 +15,11 @@
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 }
+
+@mixin pie-clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
