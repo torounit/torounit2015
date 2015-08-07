@@ -28,7 +28,7 @@ if ( ! is_admin() ) {
 
 	function enqueue_scripts() {
 		wp_enqueue_style( 'dashicons' );
-		wp_enqueue_style( "font-awesome", "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" );
+		wp_enqueue_style( "font-awesome", "//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" );
 		wp_enqueue_style( "roboto", "http://fonts.googleapis.com/css?family=Roboto:400,300" );
 
 		if ( WP_DEBUG ) {
