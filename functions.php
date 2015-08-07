@@ -32,11 +32,11 @@ if ( ! is_admin() ) {
 		wp_enqueue_style( "roboto", "http://fonts.googleapis.com/css?family=Roboto:400,300" );
 
 		if ( WP_DEBUG ) {
-			wp_enqueue_style( "all", get_template_directory_uri() . "/assets/dist/styles/all.css", array( 'dashicons' ) );
-			wp_enqueue_script( 'all', get_template_directory_uri() . "/assets/dist/scripts/all.js", array( "jquery" ), '1.0.0', true );
+			wp_enqueue_style( "all", get_template_directory_uri() . "/assets/dist/styles/all.css", array( 'dashicons' ), '1.1.0' );
+			wp_enqueue_script( 'all', get_template_directory_uri() . "/assets/dist/scripts/all.js", array( "jquery" ), '1.1.0', true );
 		} else {
-			wp_enqueue_style( "all", get_template_directory_uri() . "/assets/dist/styles/all.min.css", array( 'dashicons' ) );
-			wp_enqueue_script( 'all', get_template_directory_uri() . "/assets/dist/scripts/all.min.js", array( "jquery" ), '1.0.0', true );
+			wp_enqueue_style( "all", get_template_directory_uri() . "/assets/dist/styles/all.min.css", array( 'dashicons' ), '1.1.0' );
+			wp_enqueue_script( 'all', get_template_directory_uri() . "/assets/dist/scripts/all.min.js", array( "jquery" ), '1.1.0', true );
 		}
 
 		wp_enqueue_script( 'hatena', "//b.st-hatena.com/js/bookmark_button.js", [ ], null, true );
