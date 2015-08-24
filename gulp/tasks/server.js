@@ -11,6 +11,7 @@ var connectPHP = require('gulp-connect-php');
 var config = require('../config.js');
 var handleErrors = require('../util/handleErrors.js');
 var gulp = require('gulp');
+var watch = require('gulp-watch');
 
 
 // ==================================
@@ -37,7 +38,7 @@ gulp.task('browserSync', function () {
 		browserSync({
 			proxy: config.browserSync.proxy
 		});
-		$.watch(config.browserSync.files, function () {
+		watch(config.browserSync.files, function () {
 			browserSync.reload();
 		});
 	} else {
