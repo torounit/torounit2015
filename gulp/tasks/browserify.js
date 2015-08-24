@@ -22,12 +22,13 @@ var gulp = require('gulp');
 // ==================================
 
 
-gulp.task('browserify', function () {
+var b = browserify(config.browserify.bundleOption)
+	.transform('babelify')
+	.transform("browserify-shim")
+	.transform("debowerify");
 
-	var b = browserify(config.browserify.bundleOption)
-		.transform('babelify')
-		.transform("browserify-shim")
-		.transform("debowerify");
+
+gulp.task('browserify', function () {
 
 	var bundle = function () {
 		b.bundle().on('error', handleErrors)
@@ -39,4 +40,16 @@ gulp.task('browserify', function () {
 		bundler.on('update', bundle);
 	}
 	bundle();
+});
+
+gulp.task('browserify:dist', function () {
+
+	b.bundle()
+		.pipe(source(config.browserify.filename))
+		.pipe(buffer())
+		.pipe(uglify())
+		.pipe(rename({
+			extname: ".min.js"
+		}))
+		.pipe(gulp.dest(config.browserify.dest));
 });
