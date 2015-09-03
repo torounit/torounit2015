@@ -7,14 +7,18 @@
 // ==================================
 
 var source = require('vinyl-source-stream');
-var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
 
+var browserify = require('browserify');
 //tranform
 var babelify = require('babelify');
 var browserifyShim = require('browserify-shim');
 var debowerify = require('debowerify');
 
 var watchify = require('watchify');
+
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 
 var config = require('../config.js');
 var handleErrors = require('../util/handleErrors.js');
