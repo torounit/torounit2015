@@ -8,7 +8,14 @@
 
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
+
+//tranform
+var babelify = require('babelify');
+var browserifyShim = require('browserify-shim');
+var debowerify = require('debowerify');
+
 var watchify = require('watchify');
+
 var config = require('../config.js');
 var handleErrors = require('../util/handleErrors.js');
 var gulp = require('gulp');
@@ -23,9 +30,11 @@ var gulp = require('gulp');
 
 
 var b = browserify(config.browserify.bundleOption)
-	.transform('babelify')
-	.transform("browserify-shim")
-	.transform("debowerify");
+	.transform(babelify.configure({
+		compact: false
+	}))
+	.transform(browserifyShim)
+	.transform(debowerify);
 
 
 gulp.task('browserify', function () {
