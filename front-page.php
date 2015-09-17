@@ -3,7 +3,7 @@
 		<main class="l-main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
 			<section class="c-card">
-				<h1 class="u-text-center"><a href="/blog" class="u-text-color-inherit"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
+				<h1 class="u-text-center"><a href="<?php echo home_url("/blog");?>" class="u-text-color-inherit"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
 				<ul class="p-postList" itemscope itemtype="http://schema.org/Blog">
 					<?php
 					$blog = new WP_Query( [ "posts_per_page" => 10 ] );
@@ -19,10 +19,20 @@
 					endwhile; ?>
 				</ul>
 
+				<nav class="p-pageNav">
+					<a href="<?php echo home_url("/blog/page/2");?>">
+						<span class="p-pageNav__next"><span class="fa-stack fa-lg">
+						  <i class="fa fa fa-circle-thin fa-stack-2x"></i>
+						  <i class="fa fa-angle-right fa-stack-1x"></i>
+						</span></span>
+					</a>
+
+				</nav>
+
 			</section>
 
 			<section class="c-card">
-				<h1 class="u-text-center"><a href="/plugins" class="u-text-color-inherit"><span class="dashicons dashicons-admin-plugins"></span> Plugins</a></h1>
+				<h1 class="u-text-center"><a href="<?php echo home_url("/plugins");?>" class="u-text-color-inherit"><span class="dashicons dashicons-admin-plugins"></span> Plugins</a></h1>
 
 				<div class="l-grid">
 					<?php
