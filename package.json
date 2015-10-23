@@ -34,5 +34,9 @@
   },
   "dependencies": {
     "inuit-normalize": "^3.0.3"
+  },
+  "scripts": {
+    "build": "gulp build:dist",
+    "dist": "gulp dist"
   }
 }
