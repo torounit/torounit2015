@@ -1,11 +1,5 @@
 'use strict';
 
-// ==================================
-//
-// Load modules.
-//
-// ==================================
-
 var gulp = require('gulp');
 
 // ==================================
@@ -22,23 +16,3 @@ gulp.task('default', ['setWatch', 'build', 'watch', 'browserSync']);
 gulp.task('phpserver', ['setPHPServer', 'default']);
 
 
-// ==================================
-//
-// distribution
-//
-// ==================================
-
-gulp.task( 'dist',['build:dist'], function() {
-    return gulp.src(
-        [
-            './**/*.php',
-            './assets/dist/**/*.*',
-            './favicon.ico',
-            './style.css',
-            "!./dist/**/*.*",
-            "!./node_modules/**/*.*"
-        ],
-        { base: './' }
-    )
-    .pipe( gulp.dest( 'dist' ) );
-} );
