@@ -8,7 +8,9 @@
 var gulp = require('gulp');
 var del = require('del');
 
-gulp.task('clean', del.bind(null, ['dist']));
+gulp.task('clean', function(){
+	del(['dist/**/*.*', '!.git/']);
+});
 gulp.task('dist', ['clean', 'build:dist'], function() {
 	return gulp.src(
 		[
