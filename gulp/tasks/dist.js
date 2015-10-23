@@ -6,22 +6,23 @@
 //
 // ==================================
 var gulp = require('gulp');
-var del = require('del');
+var debug = require('gulp-debug');
 
-gulp.task('clean', function(){
-	del(['dist/**/*.*', '!.git/']);
-});
 gulp.task('dist', [ 'build:dist'], function() {
 	return gulp.src(
-		[
-			'./**/*.php',
-			'./assets/dist/**',
-			'./favicon.ico',
-			'./style.css',
-			"!./dist/**",
-			"!./node_modules/**/*.*"
-		],
-		{ base: './' }
-	)
+			[
+				'./**/*.php',
+				'./assets/dist/**',
+				'./favicon.ico',
+				'./style.css',
+				"!./dist/**",
+				"!./node_modules/**/*.*"
+			],
+			{ base: './' }
+		)
+		.pipe( debug() )
 		.pipe( gulp.dest( 'dist' ) );
+
+
+
 } );
