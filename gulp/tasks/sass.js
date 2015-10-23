@@ -13,9 +13,15 @@ var bulkSass = require('gulp-sass-bulk-import');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
 var rename = require('gulp-rename');
+var postcss = require('gulp-postcss');
+var atImport = require("postcss-import");
 
+var processors = [
+	autoprefixer(),
+	atImport
+];
 
 // ==================================
 //
@@ -32,7 +38,7 @@ gulp.task('sass', function () {
 		.pipe(bulkSass())
 		.pipe(sass())
 		.on('error', handleErrors)
-		.pipe(autoprefixer())
+		.pipe(postcss(processors))
 		.pipe(sourcemaps.write({
 			includeContent: false,
 			sourceRoot: config.sass.sourceRoot
@@ -44,7 +50,7 @@ gulp.task('sass:dist', function () {
 	gulp.src(config.sass.src)
 		.pipe(bulkSass())
 		.pipe(sass())
-		.pipe(autoprefixer())
+		.pipe(postcss(processors))
 		.pipe(rename({
 			extname: ".min.css"
 		}))
