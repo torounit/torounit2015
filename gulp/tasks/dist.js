@@ -7,8 +7,9 @@
 // ==================================
 var gulp = require('gulp');
 var debug = require('gulp-debug');
+var runSequence = require('run-sequence');
 
-gulp.task('dist', [ 'build:dist'], function() {
+gulp.task('copy', function() {
 	return gulp.src(
 			[
 				'./**/*.php',
@@ -22,7 +23,8 @@ gulp.task('dist', [ 'build:dist'], function() {
 		)
 		.pipe( debug() )
 		.pipe( gulp.dest( 'dist' ) );
-
-
-
 } );
+
+gulp.task('dist', function(cb){
+	return runSequence( 'build:dist', 'copy', cb );
+});

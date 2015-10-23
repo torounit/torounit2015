@@ -17,6 +17,7 @@ var autoprefixer = require('autoprefixer');
 var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
 var atImport = require("postcss-import");
+var debug = require('gulp-debug');
 
 var processors = [
 	autoprefixer(),
@@ -32,7 +33,7 @@ var processors = [
 
 gulp.task('sass', function () {
 
-	gulp.src([config.sass.src])
+	return gulp.src([config.sass.src])
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(bulkSass())
@@ -47,12 +48,13 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:dist', function () {
-	gulp.src(config.sass.src)
+	return gulp.src(config.sass.src)
 		.pipe(bulkSass())
 		.pipe(sass())
 		.pipe(postcss(processors))
 		.pipe(rename({
 			extname: ".min.css"
 		}))
+		.pipe( debug() )
 		.pipe(gulp.dest(config.sass.dest));
 });

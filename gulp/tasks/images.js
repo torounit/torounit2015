@@ -21,7 +21,7 @@ var imagemin = require('gulp-imagemin');
 // ==================================
 
 gulp.task('images', function () {
-	gulp.src(config.images.src)
+	return gulp.src(config.images.src)
 		.pipe(changed(config.images.dest))
 		.pipe(plumber({
 			errorHandler: handleErrors

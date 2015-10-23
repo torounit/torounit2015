@@ -17,6 +17,6 @@ var gulp = require('gulp');
 
 gulp.task('fonts', function () {
 
-	gulp.src([config.fonts.src])
+	return gulp.src([config.fonts.src])
 		.pipe(gulp.dest(config.fonts.dest));
 });

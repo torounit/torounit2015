@@ -23,6 +23,7 @@ var rename = require('gulp-rename');
 var config = require('../config.js');
 var handleErrors = require('../util/handleErrors.js');
 var gulp = require('gulp');
+var debug = require('gulp-debug');
 
 
 
@@ -52,17 +53,18 @@ gulp.task('browserify', function () {
 		var bundler = watchify(b);
 		bundler.on('update', bundle);
 	}
-	bundle();
+	return bundle();
 });
 
 gulp.task('browserify:dist', function () {
 
-	b.bundle()
+	return b.bundle()
 		.pipe(source(config.browserify.filename))
 		.pipe(buffer())
 		.pipe(uglify())
 		.pipe(rename({
 			extname: ".min.js"
 		}))
+		.pipe( debug() )
 		.pipe(gulp.dest(config.browserify.dest));
 });

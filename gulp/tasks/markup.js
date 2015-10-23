@@ -17,6 +17,6 @@ var gulp = require('gulp');
 
 gulp.task('markup', function () {
 
-	gulp.src([config.markup.src])
+	return gulp.src([config.markup.src])
 		.pipe(gulp.dest(config.markup.dest));
 });
