@@ -3,3 +3,4 @@ vendor
 .sass-cache
 assets/dist
 docs/styleguide
+dist
