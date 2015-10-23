@@ -11,13 +11,14 @@ var del = require('del');
 gulp.task('clean', function(){
 	del(['dist/**/*.*', '!.git/']);
 });
-gulp.task('dist', ['clean', 'build:dist'], function() {
+gulp.task('dist', [ 'build:dist'], function() {
 	return gulp.src(
 		[
 			'./**/*.php',
-			'./assets/dist/**/*.*',
+			'./assets/dist/**',
 			'./favicon.ico',
 			'./style.css',
+			"!./dist/**",
 			"!./node_modules/**/*.*"
 		],
 		{ base: './' }
