@@ -2,11 +2,12 @@ language: node_js
 node_js:
   - "4.1"
 env:
-  - GIT_COMMITTER_NAME=torounit
-  - GIT_COMMITTER_EMAIL=mail@torounit.com
-  - GIT_AUTHOR_NAME=torounit
-  - GIT_AUTHOR_EMAIL=mail@torounit.com
-  - secure: "LHoTKwuCE25DGFUyino8xo6DX7C7lo8OWUXDR3rbFKIXXTIdkRApaq5vB7sRV4IXK5rlDXYJdTZCnTDON3I63Puwj6g030yygdYmcFQ/Qc8rIWYfdaOExRNS8TvpXTG2ytr6+uTq8VmlvArFZCumf1Mnfv2z+jd1UEPw34oo2us="
+  global:
+    - GIT_COMMITTER_NAME=torounit
+    - GIT_COMMITTER_EMAIL=mail@torounit.com
+    - GIT_AUTHOR_NAME=torounit
+    - GIT_AUTHOR_EMAIL=mail@torounit.com
+    - secure: "LHoTKwuCE25DGFUyino8xo6DX7C7lo8OWUXDR3rbFKIXXTIdkRApaq5vB7sRV4IXK5rlDXYJdTZCnTDON3I63Puwj6g030yygdYmcFQ/Qc8rIWYfdaOExRNS8TvpXTG2ytr6+uTq8VmlvArFZCumf1Mnfv2z+jd1UEPw34oo2us="
 
 before_script:
   - npm install
