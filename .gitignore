@@ -1,9 +1,5 @@
 node_modules
 vendor
-assets/stylesheets
 .sass-cache
-assets/javascripts
 assets/dist
 docs/styleguide
-build.json
-.ftppass
