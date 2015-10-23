@@ -9,13 +9,11 @@ env:
 
 before_script:
     - npm install -g gulp
-    - git clone --quiet https://github.com/torounit/torounit2015.git dist
-    - pushd dist
-    - git checkout -b dist
     - npm install
-    - popd
+    - git clone -b dist --quiet https://github.com/torounit/torounit2015.git dist
 script:
     - gulp dist
+
 after_success:
     - cd dist
     - git add -A
