@@ -32,10 +32,11 @@ gulp.task( 'dist',['build:dist'], function() {
     return gulp.src(
         [
             './**/*.php',
-            './assets/dist/**/*' ,
+            './assets/dist/**/*.*',
             './favicon.ico',
             './style.css',
-            "!./node_modules/**/*"
+            "!./dist/**/*.*",
+            "!./node_modules/**/*.*"
         ],
         { base: './' }
     )
