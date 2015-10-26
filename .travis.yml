@@ -15,6 +15,7 @@ env:
     - secure: "LHoTKwuCE25DGFUyino8xo6DX7C7lo8OWUXDR3rbFKIXXTIdkRApaq5vB7sRV4IXK5rlDXYJdTZCnTDON3I63Puwj6g030yygdYmcFQ/Qc8rIWYfdaOExRNS8TvpXTG2ytr6+uTq8VmlvArFZCumf1Mnfv2z+jd1UEPw34oo2us="
 
 before_script:
+  - nvm install 4.2
   - npm install
   - git clone -b dist --quiet https://github.com/torounit/torounit2015.git dist
 script:
