@@ -13,8 +13,6 @@ var browserify = require('browserify');
 //tranform
 var babelify = require('babelify');
 var browserifyShim = require('browserify-shim');
-var debowerify = require('debowerify');
-
 var watchify = require('watchify');
 
 var uglify = require('gulp-uglify');
@@ -38,8 +36,7 @@ var b = browserify(config.browserify.bundleOption)
 	.transform(babelify.configure({
 		compact: false
 	}))
-	.transform(browserifyShim)
-	.transform(debowerify);
+	.transform(browserifyShim);
 
 
 gulp.task('browserify', function () {
