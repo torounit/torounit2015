@@ -14,7 +14,6 @@ gulp.task('copy', function() {
 			[
 				'./**/*.php',
 				'./assets/dist/**',
-				'./favicon.ico',
 				'./style.css',
 				"!./dist/**",
 				"!./node_modules/**/*.*"
