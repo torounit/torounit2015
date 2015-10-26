@@ -17,9 +17,6 @@
 	<link rel="dns-prefetch" href="//cdn-ak.b.st-hatena.com">
 	<link rel="start" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'url' ); ?>">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="shortcut icon" href="<?php bloginfo( "stylesheet_directory" ); ?>/favicon.ico"
-	      type="image/vnd.microsoft.icon"/>
-	<link rel="icon" href="<?php bloginfo( "stylesheet_directory" ); ?>/favicon.ico" type="image/vnd.microsoft.icon"/>
 	<?php wp_head(); ?>
 
 </head>
