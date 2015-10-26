@@ -17,6 +17,7 @@ var autoprefixer = require('autoprefixer');
 var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
 var atImport = require("postcss-import");
+var minifyCss = require('gulp-minify-css');
 var debug = require('gulp-debug');
 
 var processors = [
@@ -52,6 +53,7 @@ gulp.task('sass:dist', function () {
 		.pipe(bulkSass())
 		.pipe(sass())
 		.pipe(postcss(processors))
+		.pipe(minifyCss())
 		.pipe(rename({
 			extname: ".min.css"
 		}))

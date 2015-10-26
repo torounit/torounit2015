@@ -1,6 +1,6 @@
 {
   "author": "Toro_Unit",
-  "license": "",
+  "license": "GPL",
   "browserify-shim": {
     "jquery": "global:jQuery",
     "underscore": "global:_"
@@ -11,14 +11,12 @@
     "browser-sync": "^2.9.11",
     "browserify": "^11.2.0",
     "browserify-shim": "^3.8.10",
-    "debowerify": "^1.3.1",
-    "del": "^2.0.2",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
     "gulp-changed": "^1.3.0",
     "gulp-connect-php": "0.0.5",
     "gulp-debug": "^2.1.2",
     "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.1.6",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.0.1",
