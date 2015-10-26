@@ -1,9 +1,16 @@
 {
+  "name": "torounit2015",
+  "description": "Toro_Unit blog theme.",
   "author": "Toro_Unit",
-  "license": "GPL",
-  "browserify-shim": {
-    "jquery": "global:jQuery",
-    "underscore": "global:_"
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/torounit/torounit2015",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/torounit/torounit2015.git"
+  },
+  "author": {
+    "name": "Toro_Unit",
+    "email": "mail@torounit.com"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
@@ -39,5 +46,9 @@
   "scripts": {
     "build": "gulp build:dist",
     "dist": "gulp dist"
+  },
+    "browserify-shim": {
+    "jquery": "global:jQuery",
+    "underscore": "global:_"
   }
 }
