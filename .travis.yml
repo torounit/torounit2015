@@ -23,6 +23,8 @@ script:
 
 after_success:
   - cd dist
+  - git rm -r *
+  - 'echo "このブランチはコミットしない部が占拠しました。">README.md'
   - git add -A
   - git commit -m 'Update'
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/torounit/torounit2015.git dist 2> /dev/null'
+  - '[ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/torounit/torounit2015.git dist 2> /dev/null'
