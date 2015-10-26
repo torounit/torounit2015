@@ -1,6 +1,11 @@
 language: node_js
+
 node_js:
   - "4.1"
+
+php:
+  - "5.6"
+
 env:
   global:
     - GIT_COMMITTER_NAME=torounit
@@ -13,6 +18,9 @@ before_script:
   - npm install
   - git clone -b dist --quiet https://github.com/torounit/torounit2015.git dist
 script:
+  # Search for PHP syntax errors.
+  - find . \( -name '*.php' \) -exec php -lf {} \;
+  # build assets.
   - npm run dist
 
 after_success:
