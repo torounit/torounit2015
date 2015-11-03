@@ -56,7 +56,7 @@
 
 
 .twitter-tweet-rendered,
-.fb_iframe_widget {
+.fb_iframe_widget:not(.fb-like) {
 	display: table !important;
 	margin: 1.2em auto !important;
 }
