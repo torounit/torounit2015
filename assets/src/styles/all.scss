@@ -55,8 +55,9 @@
 }
 
 
-.twitter-tweet-rendered {
-	display: block !important;
+.twitter-tweet-rendered,
+.fb_iframe_widget {
+	display: table !important;
 	margin: 1.2em auto !important;
 }
 
