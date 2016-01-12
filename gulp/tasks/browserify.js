@@ -34,7 +34,8 @@ var debug = require('gulp-debug');
 
 var b = browserify(config.browserify.bundleOption)
 	.transform(babelify.configure({
-		compact: false
+		compact: false,
+		presets: ["es2015"]
 	}))
 	.transform(browserifyShim);
 
