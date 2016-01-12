@@ -20,6 +20,8 @@ before_script:
 script:
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
+  # build assets.
+  - npm run dist
 
-deploy:
+after_success:
   - bash ./bin/deploy.sh
