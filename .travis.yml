@@ -21,8 +21,5 @@ script:
   # build assets.
   - npm run dist
 
-after_success:
-  - cd dist
-  - git add -A
-  - git commit -m 'Update'
-  - '[ "false" == "$TRAVIS_PULL_REQUEST" ] && [ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/torounit/torounit2015.git dist 2> /dev/null'
+deploy:
+  - bash ./bin/deploy.sh
