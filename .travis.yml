@@ -16,12 +16,10 @@ env:
 before_script:
   - nvm install 4.2
   - npm install
-  - git clone -b dist --quiet https://github.com/torounit/torounit2015.git dist
+
 script:
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
-  # build assets.
-  - npm run dist
 
-after_success:
+deploy:
   - bash ./bin/deploy.sh

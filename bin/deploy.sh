@@ -12,6 +12,10 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
+git clone -b dist --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" dist
+
+npm run dist
+
 cd dist
 
 git add -A
