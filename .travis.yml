@@ -1,5 +1,7 @@
 language: php
 
+sudo: false
+
 php:
   - "5.6"
 
@@ -21,5 +23,5 @@ script:
   # build assets.
   - npm run dist
 
-deploy:
+after_success:
   - bash ./bin/deploy.sh
