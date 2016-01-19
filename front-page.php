@@ -93,7 +93,11 @@
 					<?php
 					$plugin_page = get_page_by_path( "plugins" );
 					$pageID      = $plugin_page ? $plugin_page->ID : 0;
-					$plugins     = new WP_Query( [ "post_parent" => $pageID, "post_type" => "page", "order" => "ASC"
+					$plugins     = new WP_Query( [
+						"post_parent" => $pageID,
+						"post_type" => "page",
+						"orderby" => "menu_order",
+						"order"	=> "ASC"
 					] );
 					while ( $plugins->have_posts() ):
 						$plugins->the_post();
