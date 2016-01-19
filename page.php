@@ -24,9 +24,6 @@
 							<div class="p-article__pagenav"><?php wp_link_pages();?></div>
 						</div>
 
-						<?php get_template_part("partial/ad");?>
-						<?php get_template_part("partial/bookmarks");?>
-
 						<?php if( comments_open() ) :?>
 							<div class="p-article__comment" itemscope itemprop="comment" itemtype="http://schema.org/UserComments">
 								<?php comments_template();?>
