@@ -25,7 +25,7 @@
 	<div class="l-row">
 		<div class="c-card">
 
-			<div>
+			<div class="c-card__body">
 				<div class="l-navbar">
 					<ul class="p-nav">
 						<li class="p-nav__item"><a href="#" class="js-btn" data-slidemenu-target=".js-search" title="search"><i
@@ -34,42 +34,35 @@
 									class="fa fa-bars fa-lg"></i></a></li>
 					</ul>
 				</div>
-			</div>
 
-			<div class="js-search c-slidemenu">
-				<div class="p-search">
-					<form action="/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-						<meta itemprop="target" content="http://www.torounit.com/?s={s}">
-						<input type="search" id="s" name="s" value="" class="p-search__input" placeholder="Search..."
-						       itemprop="query-input">
-					</form>
+				<div class="js-search c-slidemenu">
+					<div class="p-search">
+						<form action="/" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+							<meta itemprop="target" content="http://www.torounit.com/?s={s}">
+							<input type="search" id="s" name="s" value="" class="p-search__input" placeholder="Search..."
+							       itemprop="query-input">
+						</form>
+					</div>
 				</div>
+
+				<div class="js-menu c-slidemenu">
+					<nav class="p-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<ul class="p-menu__items">
+							<?php wp_list_pages( 'title_li=' ); ?>
+						</ul>
+					</nav>
+				</div>
+
+				<header class="l-WPHeader" itemscope itemtype="http://schema.org/WPHeader">
+					<h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img
+								src="<?= Helper::getImageURI( "torounit2016.svg" ); ?>" alt="Toro_Unit"></a></h1>
+				</header>
+
 			</div>
 
-			<div class="js-menu c-slidemenu">
-				<nav class="p-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<ul class="p-menu__items">
-						<?php wp_list_pages( 'title_li=' ); ?>
-					</ul>
-				</nav>
-			</div>
 
-			<header class="l-WPHeader" itemscope itemtype="http://schema.org/WPHeader">
-				<h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img
-							src="<?= Helper::getImageURI( "torounit2016.svg" ); ?>" alt="Toro_Unit"></a></h1>
-			</header>
 
 
 		</div>
 	</div>
 
-	<div class="l-row">
-		<div class="c-card">
-
-			<nav class="p-breadcrumbs" itemprop="breadcrumb">
-				<?php if ( function_exists( 'bread_crumb' ) ) {
-					bread_crumb( [ "type" => "string", "home_label" => '<i class="fa fa-home"></i>' ] );
-				} ?>
-			</nav>
-		</div>
-	</div>
