@@ -1,14 +1,6 @@
 .l-row {
 	margin: 0 auto;
-	max-width: 900px;
-	padding: 0 10px;
+	max-width: 1200px;
+	padding: 0 20px;
 	box-sizing: border-box;
-
-	&_tightly {
-		padding: 0;
-	}
-
-	&_content {
-		box-sizing: content-box;
-	}
 }

@@ -1,9 +1,9 @@
 .l-main {
-	padding-top: 10px;
-	padding-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 	@media #{$medium-up} {
-		padding-top: 20px;
-		padding-bottom: 30px;
+		margin-top: 20px;
+		margin-bottom: 30px;
 	}
 
 }

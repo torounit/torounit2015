@@ -1,13 +1,16 @@
 
 .p-breadcrumbs {
-	background-color: #000;
+	//background-color: #000;
 	font-size: 1.2rem;
-	color: #FFF;
+	//color: #FFF;
 	padding-top: 6px;
 	padding-bottom: 6px;
 	text-align: left;
 	a {
-		color: #FFF
+		color: inherit;
+	}
+	strong {
+		background: none;
 	}
 
 }

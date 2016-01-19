@@ -1,10 +1,9 @@
 .p-menu {
 
-	font-size: 1.3rem;
 	&__items {
 		padding: 0;
 		margin-top: 0;
-		border-bottom: 1px solid #eee;
+			border-bottom: 1px solid rgba(#BA3333, 0.15);
 		margin-bottom: 30px;
 
 	}
@@ -14,7 +13,7 @@
 	}
 
 	li {
-		border-top: 1px solid #eee;
+		border-top: 1px solid rgba(#BA3333, 0.15);
 		display: block;
 
 		a {

@@ -1,8 +1,8 @@
 
-var $ = require("jquery");
-var SlideMenu = require('./SlideMenu');
+import $ from 'jquery';
+import SlideMenu from './SlideMenu';
 
-require('./sdk.js');
+import './sdk.js';
 
 $(function() {
 	SlideMenu.init();

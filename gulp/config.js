@@ -27,7 +27,7 @@ module.exports = {
 	 *
 	 */
 	browserSync: {
-		proxy: 'torounit.dev',
+		proxy: 'dev.torounit.com',
 		server: {
 			baseDir: './'
 		},

@@ -1,7 +1,7 @@
 .l-WPHeader {
 	padding: 0;
 	overflow: hidden;
-	padding-bottom: 48px;
+	padding: 48px 0;
 
 	box-sizing: border-box;
 	width: 100%;
@@ -19,10 +19,10 @@
 		}
 
 		img {
-			width: 30%;
+			width: 50%;
 			display: block;
 			margin: 0 auto;
-			min-width: 250px;
+			max-width: 200px;
 			height: auto;
 		}
 	}

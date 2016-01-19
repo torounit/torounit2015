@@ -1,0 +1,25 @@
+.c-btn {
+	display: inline-block;
+	padding: 8px 16px;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+
+	&_primary {
+		color: #FFF;
+		background-color: #BA3333;
+	}
+
+	&_default {
+		color: #FFF;
+		background-color: #333;
+	}
+
+}

@@ -29,7 +29,9 @@ body {
 	color: #333;
 	@include pie-clearfix();
 	letter-spacing: 0.05rem;
-	background: #fafafa;
+	background: #fafafa  url("../images/bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
 
 
 	// text-rendering: optimizeLegibility;
@@ -83,7 +85,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 1.8em;
+	font-size: 1.6em;
 	margin: 0.8em 0 0.4em;
 }
 

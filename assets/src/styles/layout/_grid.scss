@@ -1,77 +1,127 @@
+$grid-gutter: 20px !default;
 
-.l-grid {
-	//Grid Row.
-	// @include display-flex;
-	// @include flex-direction(row);
-	// @include flex-wrap(wrap);
-	// @include flex-flow(row wrap);
-	@include pie-clearfix();
-	margin-left: -1 * $gutter-small / 2;
-	margin-right: -1 * $gutter-small / 2;
 
-	@media #{$medium-up} {
-		margin-left: -1 * $gutter / 2;
-		margin-right: -1 * $gutter / 2;
+$colslist: 1, 2, 3, 4, 5, 6, 12;
+
+@mixin grid-unit($num) {
+	@for $i from 1 through $num {
+		&_#{$i}of#{$num} {
+			width: percentage($i/$num);
+			max-width: percentage($i/$num);
+			min-width: percentage($i/$num);
+			flex-basis: percentage($i/$num);
+		}
+
+		&_offset_#{$i}of#{$num} {
+			margin-left: percentage($i/$num);
+		}
+
+		.c-grid_reverse &_offset_#{$i}of#{$num} {
+			margin-left: 0;
+			margin-right: percentage($i/$num);
+		}
+
 	}
+}
+.l-grid {
+	clear: both;
+	margin-left: -1 * $grid-gutter / 2;
+	margin-right: -1 * $grid-gutter / 2;
 
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 
 
 	&__u {
 
 		box-sizing: border-box;
-		float: left;
-		padding: 0 $gutter-small / 2;
+		width: 100%;
+		position: relative;
 
-		&_right {
-			float: right;
+		flex-grow: 0;
+		flex-shrink: 0;
+
+		padding: 0 $grid-gutter / 2;
+
+		@each $cols in $colslist {
+			@include grid-unit($cols);
 		}
 
-		@media #{$medium-up} {
-			padding: 0 $gutter / 2;
-		}
-
-		&_small {
-			@for $i from 1 through 12 {
-				&-#{$i} {
-					width: percentage($i/12);
+		@media #{$small-up} {
+			&_small {
+				@each $cols in $colslist {
+					@include grid-unit($cols);
 				}
 			}
 		}
-		@media #{$medium-up} {
 
+		@media #{$medium-up} {
 			&_medium {
-				@for $i from 1 through 12 {
-					&-#{$i} {
-						width: percentage($i/12);
-					}
+				@each $cols in $colslist {
+					@include grid-unit($cols);
 				}
 			}
 		}
+
 		@media #{$large-up} {
-
 			&_large {
-				@for $i from 1 through 12 {
-					&-#{$i} {
-						width: percentage($i/12);
-					}
+				@each $cols in $colslist {
+					@include grid-unit($cols);
 				}
 			}
 		}
+
 	}
 
-	&_noGutter {
-		padding-left: $gutter-small / 2;
-		padding-right: $gutter-small / 2;
 
-		@media #{$medium-up} {
-			padding-left: $gutter / 2;
-			padding-right: $gutter / 2;
-		}
+	&_center {
+		align-items: center;
 	}
 
-	&_noGutter &__u {
+	&_center > &__u {
+		//display: flex;
+		//align-items: center;
+	}
+
+	&_bottom {
+		align-items: flex-end;
+	}
+
+	&_reverse {
+		flex-direction: row-reverse;
+	}
+
+	&_collapse {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	&_collapse > &__u {
 		padding: 0;
 	}
+
+	&_tight {
+		margin-left: -3px;
+		margin-right: -3px;
+	}
+
+	&_tight > &__u {
+		padding: 0 3px;
+	}
+	@media #{$large-up} {
+		&_loose {
+			margin-left: -40px;
+			margin-right: -40px;
+		}
+
+		&_loose > &__u {
+			padding: 0 40px;
+		}
+	}
+
+
+
 
 }
 
