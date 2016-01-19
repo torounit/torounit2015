@@ -41,7 +41,9 @@
 @import "object/utility/visible";
 @import "object/utility/align";
 
-
+#tinymce {
+	background: none #FFF;
+}
 
 .dashicons,
 .dashicons-before:before {
