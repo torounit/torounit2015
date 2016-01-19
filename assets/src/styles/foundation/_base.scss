@@ -169,7 +169,7 @@ hr {
 
 blockquote {
 	background-color: #fafafa;
-	padding: 20px;
+	padding: 24px;
 	border-left: 4px solid #CCC;
 
 }
@@ -193,13 +193,13 @@ input[type="password"]
 	box-sizing: border-box;
 	display: block;
 	width: 100%;
-	padding: 6px 12px;
-	margin-top: 6px;
-	margin-bottom: 6px;
+	padding: 8px 16px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 	color: #555;
 	background-color: #fff;
 	background-image: none;
-	border: none;
+	border: 1px solid #d8d8d8;
 	border-radius: 4px;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -221,7 +221,7 @@ select {
 textarea {
 	height: auto;
 	width: 100%;
-	padding: 5px 7px;
+	padding: 8px 16px;
 }
 
 
