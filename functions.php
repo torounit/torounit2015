@@ -28,3 +28,16 @@ add_filter( 'jetpack_open_graph_image_default', function ( $image ) {
 } );
 
 
+add_filter( 'the_content', function( $html ){
+	if( is_singular() ){
+		ob_start();
+		get_template_part( "partial/ad" );
+		$ad = ob_get_contents();
+		ob_end_clean();
+		$html = $html.$ad;
+	}
+
+	return $html;
+} );
+
+
