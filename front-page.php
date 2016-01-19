@@ -93,12 +93,14 @@
 					<?php
 					$plugin_page = get_page_by_path( "plugins" );
 					$pageID      = $plugin_page ? $plugin_page->ID : 0;
-					$plugins     = new WP_Query( [ "post_parent" => $pageID, "post_type" => "page" ] );
+					$plugins     = new WP_Query( [ "post_parent" => $pageID, "post_type" => "page", "order" => "ASC"
+					] );
 					while ( $plugins->have_posts() ):
 						$plugins->the_post();
 						?>
 						<div class="l-grid__u l-grid__u_1fo1 l-grid__u_small_1of2">
-							<section class="p-plugin">
+							<section class="p-plugin"  itemscope
+							         itemtype="http://schema.org/SoftwareApplication">
 								<a href="<?php the_permalink(); ?>">
 									<?php if ( has_post_thumbnail() ): ?>
 										<?php the_post_thumbnail(); ?>
@@ -107,7 +109,7 @@
 											src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
 											alt="" width="772" height="250">
 									<?php endif; ?>
-									<h1 class="p-plugin__title"><?php the_title(); ?></h1>
+									<h1 class="p-plugin__title" itemprop="name"><?php the_title(); ?></h1>
 								</a>
 							</section>
 						</div>
