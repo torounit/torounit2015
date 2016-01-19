@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, user-scalable=yes">
 	<meta name="twitter:widgets:csp" content="on">
-	<title><?php Helper::title(); bloginfo( 'name' ); ?></title>
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<link rel="dns-prefetch" href="//a.disquscdn.com">
 	<link rel="dns-prefetch" href="//apis.google.com">
