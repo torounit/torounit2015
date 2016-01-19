@@ -3,7 +3,62 @@
 		<main class="l-main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
 			<section class="c-card">
-				<h1 class="u-text-center"><a href="<?php echo home_url("/blog");?>" class="u-text-color-inherit"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
+				<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo home_url("/works");?>"><span class="dashicons dashicons-lightbulb"></span> Works</a></h1>
+				<p>Toro_Unitは、ウェブサイト制作・WEBデザイン・システム開発を行う個人事務所です。HTML/CSS等のフロントエンド開発・ WordPress を用いたWEBサイトが得意です。</p>
+				<p>また、WordPress テーマ・プラグインの開発、コードレビュー、レクチャー、イベント登壇なども行っています。</p>
+				<p class="u-text-center"><a href="/contact" class="c-btn c-btn_primary">Contact <i class="fa fa-angle-right"></i></a></p>
+			</section>
+
+
+			<section class="c-card">
+				<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo home_url("/works");?>"><span class="dashicons dashicons-admin-tools"></span> Own Services</a></h1>
+				<div class="l-grid">
+					<div class="l-grid__u l-grid__u_medium_1of3">
+
+						<h3>
+							<div class="u-text-center">
+									<span class="fa-stack fa-lg fa-3x">
+										<i class="fa fa-circle fa-stack-2x u-text-primary"></i>
+										<i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+									</span>
+							</div>
+							<div>WEBサイト制作</div>
+						</h3>
+						<p>WordPressやOSSを用いた、使いやすいWEBサイトを制作します。</p>
+					</div>
+					<div class="l-grid__u l-grid__u_medium_1of3">
+
+						<h3>
+							<div  class="u-text-center">
+									<span class="fa-stack fa-lg fa-3x">
+										<i class="fa fa-circle fa-stack-2x u-text-primary"></i>
+										<i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+									</span>
+							</div>
+							<div>WEBデザイン・フロントエンド開発</div>
+						</h3>
+						<p>WEBデザイン・及びHTML/CSSフロントエンドの開発、レスポンシブウェブデザインなどをご提案します。</p>
+
+					</div>
+					<div class="l-grid__u l-grid__u_medium_1of3">
+
+						<h3>
+							<div class="u-text-center">
+								<span class="fa-stack fa-lg fa-3x">
+									<i class="fa fa-circle fa-stack-2x u-text-primary"></i>
+									<i class="fa fa-wordpress fa-stack-1x fa-inverse"></i>
+								</span>
+							</div>
+							<div>WordPress プラグイン・テーマ開発</div>
+						</h3>
+						<p>WordPressの公式ディレクトリ掲載プラグイン作者、コア貢献者の経験を生かした、プラグイン・テーマの制作をいたします。</p>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="c-card">
+				<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo home_url("/blog");?>"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
 				<ul class="p-postList" itemscope itemtype="http://schema.org/Blog">
 					<?php
 					$blog = new WP_Query( [ "posts_per_page" => 10 ] );
@@ -32,7 +87,7 @@
 			</section>
 
 			<section class="c-card">
-				<h1 class="u-text-center"><a href="<?php echo home_url("/plugins");?>" class="u-text-color-inherit"><span class="dashicons dashicons-admin-plugins"></span> Plugins</a></h1>
+				<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo home_url("/plugins");?>"><span class="dashicons dashicons-admin-plugins"></span> Plugins</a></h1>
 
 				<div class="l-grid">
 					<?php
@@ -42,7 +97,7 @@
 					while ( $plugins->have_posts() ):
 						$plugins->the_post();
 						?>
-						<div class="l-grid__u l-grid__u_small-12 l-grid__u_medium-6">
+						<div class="l-grid__u l-grid__u_1fo1 l-grid__u_small_1of2">
 							<section class="p-plugin">
 								<a href="<?php the_permalink(); ?>">
 									<?php if ( has_post_thumbnail() ): ?>
@@ -60,6 +115,7 @@
 					endwhile; ?>
 				</div>
 			</section>
+
 		</main>
 	</div>
 
