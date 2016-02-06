@@ -32,7 +32,7 @@ Class Assets {
 	 */
 	public function enqueue_styles() {
 		wp_enqueue_style( 'dashicons' );
-		wp_enqueue_style( "font-awesome", "//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" );
+		wp_enqueue_style( "font-awesome", "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" );
 		wp_enqueue_style( "roboto", "//fonts.googleapis.com/css?family=Roboto:400,300" );
 		wp_enqueue_style( 'all', get_template_directory_uri() . $this->css_path, [ ], $this->theme_version );
 	}
@@ -45,7 +45,7 @@ Class Assets {
 	public function enqueue_scripts() {
 
 		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.1.3.min.js', [ ], '2.1.3', true );
+		wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.2.0.min.js', [ ], '2.2.0', true );
 		wp_enqueue_script( 'all', get_template_directory_uri() . $this->script_path, [ 'jquery', ], $this->theme_version , true );
 	}
 
