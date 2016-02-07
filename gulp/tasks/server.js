@@ -7,23 +7,9 @@
 // ==================================
 
 var browserSync = require('browser-sync');
-var connectPHP = require('gulp-connect-php');
 var config = require('../config.js');
-var handleErrors = require('../util/handleErrors.js');
 var gulp = require('gulp');
-var watch = require('gulp-watch');
 
-
-// ==================================
-//
-// PHP Server
-//
-// ==================================
-gulp.task('setPHPServer', function () {
-	global.phpServer = true;
-	config.browserSync.proxy = 'localhost:8000';
-	connectPHP.server();
-});
 
 // ==================================
 //
@@ -32,19 +18,5 @@ gulp.task('setPHPServer', function () {
 // ==================================
 
 gulp.task('browserSync', function () {
-
-	if (config.browserSync.proxy) {
-
-		browserSync({
-			proxy: config.browserSync.proxy
-		});
-		watch(config.browserSync.files, function () {
-			browserSync.reload();
-		});
-	} else {
-		browserSync({
-			server: config.browserSync.server,
-			files: config.browserSync.files
-		});
-	}
+	browserSync(config.browserSync);
 });

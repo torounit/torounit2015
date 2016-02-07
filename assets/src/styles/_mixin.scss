@@ -1,12 +1,3 @@
-// @function image-uri($path: "") {
-// 	@if compass-env() == 'development' {
-// 		@return url("../src/images/" + $path);
-// 	}
-// 	@else {
-// 		@return url("../images/" + $path);
-// 	}
-// }
-
 
 @mixin fa () {
 	display: inline-block;

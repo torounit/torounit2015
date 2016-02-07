@@ -28,9 +28,6 @@ module.exports = {
 	 */
 	browserSync: {
 		proxy: 'dev.torounit.com',
-		server: {
-			baseDir: './'
-		},
 		files: [
 			dir.dist + '/**',
 			"./**/*.php",
