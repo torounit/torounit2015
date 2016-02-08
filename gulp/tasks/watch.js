@@ -6,9 +6,9 @@
 //
 // ==================================
 
-var config = require('../config.js');
-var gulp = require('gulp');
-var watch = require('gulp-watch');
+import config from '../config.js';
+import gulp from 'gulp';
+import watch from 'gulp-watch';
 
 
 

@@ -6,12 +6,12 @@
 //
 // ==================================
 
-var config = require('../config.js');
-var handleErrors = require('../util/handleErrors.js');
-var gulp = require('gulp');
-var changed  = require('gulp-changed');
-var plumber = require('gulp-plumber');
-var imagemin = require('gulp-imagemin');
+import config from '../config.js';
+import handleErrors from '../util/handleErrors.js';
+import gulp from 'gulp';
+import changed  from 'gulp-changed';
+import plumber from 'gulp-plumber';
+import imagemin from 'gulp-imagemin';
 
 
 // ==================================

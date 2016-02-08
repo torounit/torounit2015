@@ -5,9 +5,9 @@
 // distribution
 //
 // ==================================
-var gulp = require('gulp');
-var debug = require('gulp-debug');
-var runSequence = require('run-sequence');
+import gulp from 'gulp';
+import debug from 'gulp-debug';
+import runSequence from 'run-sequence';
 
 gulp.task('copy', function() {
 	return gulp.src(

@@ -6,19 +6,19 @@
 //
 // ==================================
 
-var config = require('../config.js');
-var handleErrors = require('../util/handleErrors.js');
-var gulp = require('gulp');
-var bulkSass = require('gulp-sass-bulk-import');
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('autoprefixer');
-var rename = require('gulp-rename');
-var postcss = require('gulp-postcss');
-var atImport = require("postcss-import");
-var cssnano = require('cssnano');
-var debug = require('gulp-debug');
+import config from '../config.js';
+import handleErrors from '../util/handleErrors.js';
+import gulp from 'gulp';
+import bulkSass from 'gulp-sass-bulk-import';
+import plumber from 'gulp-plumber';
+import sass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
+import autoprefixer from 'autoprefixer';
+import rename from 'gulp-rename';
+import postcss from 'gulp-postcss';
+import atImport from "postcss-import";
+import cssnano from 'cssnano';
+import debug from 'gulp-debug';
 
 var processors = [
 	autoprefixer(),

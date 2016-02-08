@@ -6,9 +6,9 @@
 //
 // ==================================
 
-var browserSync = require('browser-sync');
-var config = require('../config.js');
-var gulp = require('gulp');
+import browserSync from 'browser-sync';
+import config from '../config.js';
+import gulp from 'gulp';
 
 
 // ==================================

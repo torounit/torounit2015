@@ -6,22 +6,22 @@
 //
 // ==================================
 
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
+import source from 'vinyl-source-stream';
+import buffer from 'vinyl-buffer';
 
-var browserify = require('browserify');
+import browserify from 'browserify';
 //tranform
-var babelify = require('babelify');
-var browserifyShim = require('browserify-shim');
-var watchify = require('watchify');
+import babelify from 'babelify';
+import browserifyShim from 'browserify-shim';
+import watchify from 'watchify';
 
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+import uglify from 'gulp-uglify';
+import rename from 'gulp-rename';
 
-var config = require('../config.js');
-var handleErrors = require('../util/handleErrors.js');
-var gulp = require('gulp');
-var debug = require('gulp-debug');
+import config from '../config.js';
+import handleErrors from '../util/handleErrors.js';
+import gulp from 'gulp';
+import debug from 'gulp-debug';
 
 
 

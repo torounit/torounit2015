@@ -47,6 +47,9 @@
     "build": "gulp build:dist",
     "dist": "gulp dist"
   },
+  "babel": {
+    "presets": ["es2015"]
+  },
   "browserify-shim": {
     "jquery": "global:jQuery",
     "underscore": "global:_"

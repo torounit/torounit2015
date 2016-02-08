@@ -6,8 +6,8 @@
 //
 // ==================================
 
-var config = require('../config.js');
-var gulp = require('gulp');
+import config from '../config.js';
+import gulp from 'gulp';
 
 // ==================================
 //
