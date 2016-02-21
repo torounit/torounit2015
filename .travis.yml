@@ -19,8 +19,8 @@ before_script:
   - npm run build
 
 script:
-  - ls -al dist/styles/all.min.css
-  - ls -al dist/scripts/all.min.js
+  - ls -al assets/dist/styles/all.min.css
+  - ls -al assets/dist/scripts/all.min.js
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
 
