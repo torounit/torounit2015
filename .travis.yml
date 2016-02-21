@@ -14,10 +14,13 @@ env:
     - secure: "LHoTKwuCE25DGFUyino8xo6DX7C7lo8OWUXDR3rbFKIXXTIdkRApaq5vB7sRV4IXK5rlDXYJdTZCnTDON3I63Puwj6g030yygdYmcFQ/Qc8rIWYfdaOExRNS8TvpXTG2ytr6+uTq8VmlvArFZCumf1Mnfv2z+jd1UEPw34oo2us="
 
 before_script:
-  - nvm install 4.2
+  - nvm install 5
   - npm install
+  - npm run build
 
 script:
+  - ls -al dist/styles/all.min.css
+  - ls -al dist/scripts/all.min.js
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
 
