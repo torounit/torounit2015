@@ -60,8 +60,9 @@
 }
 
 
-.twitter-tweet-rendered,
-.fb_iframe_widget:not(.fb-like) {
+.fb_iframe_widget:not(.fb-like), 
+.twitter-tweet-rendered, 
+iframe[src*="speakerdeck.com"] {
 	display: table !important;
 	margin: 1.2em auto !important;
 }
