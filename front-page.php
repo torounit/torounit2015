@@ -114,8 +114,8 @@
 							?>
 							<div class="l-grid__u l-grid__u_1fo1 l-grid__u_small_1of2">
 								<section class="p-plugin"  itemscope
-								         itemtype="http://schema.org/SoftwareApplication">
-									<a href="<?php the_permalink(); ?>">
+								         itemtype="http://schema.org/CreativeWork">
+									<a href="<?php the_permalink(); ?>" itemprop="url">
 										<?php if ( has_post_thumbnail() ): ?>
 											<?php the_post_thumbnail(); ?>
 										<?php else: ?>
