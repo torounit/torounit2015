@@ -66,17 +66,18 @@
 			<section class="c-card">
 				<div class="c-card__body">
 					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo home_url("/blog");?>"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
-					<ul class="p-postList" itemscope itemtype="http://schema.org/Blog">
+					<ul class="p-postList">
 						<?php
 						$blog = new WP_Query( [ "posts_per_page" => 10 ] );
 						while ( $blog->have_posts() ):
 							$blog->the_post();
 							?>
-							<li class="p-postList__item" itemprop="blogPost" itemscope
-							    itemtype="http://schema.org/BlogPosting">
+							<li class="p-postList__item" itemscope
+							    itemtype="http://schema.org/Article">
 								<time class="p-postList__pubdate"
-								      itemprop="datePublished"><?php the_time( "Y.m.d" ); ?></time>
-								<a href="<?php the_permalink(); ?>" itemprop="headline"><?php the_title(); ?></a></li>
+								      itemprop="datePublished" content="<?php the_time( "c" ); ?>"><?php the_time( "Y.m.d" ); ?></time>
+								<meta itemprop="dateModified" content="<?php the_modified_date('c');?>">
+								<a href="<?php the_permalink(); ?>"><span itemprop="headline"><?php the_title(); ?></span></a></li>
 							<?php
 						endwhile; ?>
 					</ul>
