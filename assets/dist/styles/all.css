@@ -2160,7 +2160,7 @@ iframe {
 .p-article__title a {
     color: inherit;
     text-decoration: none; }
-.p-article__thumbnail {
+.p-article .p-article__thumbnail {
   margin: 2em 0; }
 .p-article__terms {
   text-align: center;
