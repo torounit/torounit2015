@@ -1,3 +1,11 @@
+<?php
+/**
+ * Footer PHP
+ *
+ * @package torounit2015
+ */
+
+?>
 <footer class="l-WPFooter l-row" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="c-card">
 		<div class="c-card__body">

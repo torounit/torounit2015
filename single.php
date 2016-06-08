@@ -1,28 +1,37 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Single.php
+ *
+ * @package torounit2015
+ */
+
+get_header(); ?>
 	<div class="l-row">
 		<div class="c-card">
 			<div class="c-card__body">
 
 				<nav class="p-breadcrumbs" itemprop="breadcrumb">
 					<?php if ( function_exists( 'bread_crumb' ) ) {
-						bread_crumb( [ "type" => "string", "home_label" => '<i class="fa fa-home"></i>' ] );
+						bread_crumb( [ 'type' => 'string', 'home_label' => '<i class="fa fa-home"></i>' ] );
 					} ?>
 				</nav>
 
 			</div>
 			<div class="c-card__body">
-				<main  itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
+				<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 					<div itemscope itemtype="http://schema.org/Blog">
 
-						<?php if ( have_posts() ):the_post(); ?>
-							<article <?php post_class( "p-article" ); ?> itemprop="blogPost" itemscope
+						<?php if ( have_posts() ) : the_post(); ?>
+							<article <?php post_class( 'p-article' ); ?> itemprop="blogPost" itemscope
 							                                             itemtype="http://schema.org/BlogPosting">
 
 								<header class="p-article__header">
-									<?php if ( is_single() ): ?>
+									<?php if ( is_single() ) : ?>
 										<p class="p-article__pubDate"><i class="fa fa-clock-o"></i>
-											<time datetime="<?php the_time( "Y-m-d" ); ?>" itemprop="datePublished"
-											      content="<?php the_time( "Y-m-d" ); ?>"><?= date( "F d, Y", get_the_time( "U" ) ); ?></time>
+											<time datetime="<?php the_time( 'Y-m-d' ); ?>" itemprop="datePublished"
+											      content="<?php the_time( 'Y-m-d' ); ?>">
+												<?php echo esc_attr( date( 'F d, Y', get_the_time( 'U' ) ) ); ?>
+											</time>
 										</p>
 									<?php endif; ?>
 
@@ -31,9 +40,10 @@
 									</h1>
 
 									<p class="u-text-center" itemprop="keywords">
-										<span class="p-article__terms p-article__terms_category"><?php the_category( " " ); ?></span>
-										<?php if ( has_tag() ): ?>
-											<span class="p-article__terms"><?php the_tags( "", " ", "" ); ?></span>
+										<span
+											class="p-article__terms p-article__terms_category"><?php the_category( ' ' ); ?></span>
+										<?php if ( has_tag() ) : ?>
+											<span class="p-article__terms"><?php the_tags( '', ' ', '' ); ?></span>
 										<?php endif; ?>
 									</p>
 								</header>
@@ -64,7 +74,6 @@
 				</main>
 
 			</div>
-
 
 
 		</div>

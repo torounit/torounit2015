@@ -1,6 +1,13 @@
 <?php
+/**
+ * Support class.
+ *
+ * @package torounit2015
+ */
 
-
+/**
+ * Class Support
+ */
 class Support {
 
 
@@ -17,7 +24,7 @@ class Support {
 			'comment-form',
 			'comment-list',
 			'gallery',
-			'caption'
+			'caption',
 		) );
 	}
 }

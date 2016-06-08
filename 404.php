@@ -18,7 +18,7 @@
 
 					</div>
 
-					<?php get_template_part("partial/ad");?>
+					<?php get_template_part( 'partial/ad' );?>
 
 				</article>
 

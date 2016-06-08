@@ -1,5 +1,5 @@
 <?php
-if( function_exists( 'is_amp_endpoint' ) &&  is_amp_endpoint() ):?>
+if ( function_exists( 'is_amp_endpoint' ) &&  is_amp_endpoint() ) :?>
 	<amp-ad
 		type="adsense"
 		data-ad-client="ca-pub-9034724081756314"
@@ -7,7 +7,7 @@ if( function_exists( 'is_amp_endpoint' ) &&  is_amp_endpoint() ):?>
 		width="300"
 		height="200">
 	</amp-ad>
-<?php else:?>
+<?php else : ?>
 
 <aside class="p-ad" itemtype="https://schema.org/WPAdBlock" itemscope>
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -16,4 +16,4 @@ if( function_exists( 'is_amp_endpoint' ) &&  is_amp_endpoint() ):?>
 	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </aside>
 
-<?php endif?>
+<?php endif ?>
