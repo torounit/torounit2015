@@ -63,7 +63,7 @@
 
 				<header class="l-WPHeader" itemscope itemtype="http://schema.org/WPHeader">
 					<h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img
-								src="<?php esc_url( Helper::get_image_uri( 'torounit2016.svg' ) ); ?>" alt="Toro_Unit"></a></h1>
+								src="<?php echo esc_url( Helper::get_image_uri( 'torounit2016.svg' ) ); ?>" alt="Toro_Unit"></a></h1>
 				</header>
 
 			</div>
