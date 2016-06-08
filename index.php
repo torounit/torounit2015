@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+/**
+ * index
+ *
+ * @package torounit2015
+ */
+
+get_header(); ?>
 
 	<div class="l-row">
 
@@ -6,7 +13,7 @@
 			<div class="c-card__body">
 				<nav class="p-breadcrumbs" itemprop="breadcrumb">
 					<?php if ( function_exists( 'bread_crumb' ) ) {
-						bread_crumb( [ "type" => "string", "home_label" => '<i class="fa fa-home"></i>' ] );
+						bread_crumb( [ 'type' => 'string', 'home_label' => '<i class="fa fa-home"></i>' ] );
 					} ?>
 				</nav>
 			</div>
@@ -17,22 +24,22 @@
 					<section>
 						<h1 class="u-text-center"><span class="dashicons dashicons-admin-post"></span> <?php
 							if ( is_category() ) {
-								echo "Category : ";
+							echo 'Category : ';
 							}
 							if ( is_tag() ) {
-								echo "Tag : ";
+							echo 'Tag : ';
 							}
 							wp_title( '' );
 							?></h1>
 						<ul class="p-postList" itemscope itemtype="http://schema.org/Blog">
 							<?php
-							while ( have_posts() ):
+							while ( have_posts() ) :
 								the_post();
 								?>
 								<li class="p-postList__item" itemprop="blogPost" itemscope
 								    itemtype="http://schema.org/BlogPosting">
 									<time class="p-postList__pubdate"
-									      itemprop="datePublished"><?php the_time( "Y.m.d" ); ?></time>
+									      itemprop="datePublished"><?php the_time( 'Y.m.d' ); ?></time>
 									<a href="<?php the_permalink(); ?>" itemprop="headline"><?php the_title(); ?></a></li>
 								<?php
 							endwhile; ?>

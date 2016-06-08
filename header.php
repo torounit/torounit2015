@@ -1,6 +1,14 @@
+<?php
+/**
+ * Header
+ *
+ * @package torounit2015
+ */
+
+?>
 <!DOCTYPE html>
-<html lang="ja" itemscope <?php if ( ! is_search() ): ?>itemtype="http://schema.org/WebPage"
-      <?php else: ?>itemtype="http://schema.org/SearchResultsPage"<?php endif; ?>>
+<html lang="ja" itemscope <?php if ( ! is_search() ) :  ?>itemtype="http://schema.org/WebPage"
+	  <?php else : ?>itemtype="http://schema.org/SearchResultsPage"<?php endif; ?>>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, user-scalable=yes">
@@ -55,7 +63,7 @@
 
 				<header class="l-WPHeader" itemscope itemtype="http://schema.org/WPHeader">
 					<h1 class="l-WPHeader__title"><a href="/" itemprop="name"><img
-								src="<?= Helper::getImageURI( "torounit2016.svg" ); ?>" alt="Toro_Unit"></a></h1>
+								src="<?php esc_url( Helper::get_image_uri( 'torounit2016.svg' ) ); ?>" alt="Toro_Unit"></a></h1>
 				</header>
 
 			</div>
