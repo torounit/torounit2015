@@ -57,6 +57,11 @@ get_header(); ?>
 									<div class="p-article__pagenav"><?php wp_link_pages(); ?></div>
 								</div>
 
+								<aside>
+									<ins id="ad-articlebody-after"
+									     style="display: none;"
+									     class="adsbygoogle-placeholder"></ins>
+								</aside>
 
 								<?php if ( comments_open() ) : ?>
 									<div class="p-article__comment" itemscope itemprop="comment"
