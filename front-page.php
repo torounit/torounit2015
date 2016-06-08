@@ -9,19 +9,15 @@ get_header(); ?>
 	<div class="l-row l-row_content">
 		<main class="l-main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
-			<section class="c-card">
-				<div class="c-card__body">
+			<div class="c-card">
+				<section class="c-card__body">
 					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="#"><span class="dashicons dashicons-lightbulb"></span> Works</a></h1>
 					<p>Toro_Unitは、ウェブサイト制作・WEBデザイン・システム開発を行う個人事務所です。HTML/CSS等のフロントエンド開発・ WordPress を用いたWEBサイトが得意です。</p>
 					<p>また、WordPress テーマ・プラグインの開発、コードレビュー、レクチャー、イベント登壇なども行っています。</p>
 					<p class="u-text-center"><a href="/contact" class="c-btn c-btn_primary">Contact <i class="fa fa-angle-right"></i></a></p>
-				</div>
+				</section>
 
-			</section>
-
-
-			<section class="c-card">
-				<div class="c-card__body">
+				<section class="c-card__body">
 					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="#"><span class="dashicons dashicons-admin-tools"></span> Own Services</a></h1>
 					<div class="l-grid">
 						<div class="l-grid__u l-grid__u_medium_1of3">
@@ -66,12 +62,12 @@ get_header(); ?>
 						</div>
 					</div>
 
-				</div>
+				</section>
 
-			</section>
+			</div>
 
-			<section class="c-card">
-				<div class="c-card__body">
+			<div class="c-card">
+				<section class="c-card__body">
 					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo esc_url( home_url( '/blog' ) );?>"><span class="dashicons dashicons-admin-post"></span> Blog</a></h1>
 					<ul class="p-postList">
 						<?php
@@ -99,12 +95,12 @@ get_header(); ?>
 
 					</nav>
 
-				</div>
+				</section>
 
-			</section>
+			</div>
 
-			<section class="c-card">
-				<div class="c-card__body">
+			<div class="c-card">
+				<section class="c-card__body">
 					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="<?php echo esc_url( home_url( '/plugins' ) );?>"><span class="dashicons dashicons-admin-plugins"></span> Plugins</a></h1>
 
 					<div class="l-grid">
@@ -138,9 +134,9 @@ get_header(); ?>
 							<?php
 						endwhile; ?>
 					</div>
-				</div>
+				</section>
 
-			</section>
+			</div>
 
 		</main>
 	</div>
