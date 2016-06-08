@@ -11,62 +11,6 @@ get_header(); ?>
 			<?php if (have_posts()) : the_post(); ?>
 				<?php the_content();?>
 			<?php endif;?>
-			<div class="c-card">
-				<section class="c-card__body">
-					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="#"><span class="dashicons dashicons-lightbulb"></span> Works</a></h1>
-					<p>Toro_Unitは、ウェブサイト制作・WEBデザイン・システム開発を行う個人事務所です。HTML/CSS等のフロントエンド開発・ WordPress を用いたWEBサイトが得意です。</p>
-					<p>また、WordPress テーマ・プラグインの開発、コードレビュー、レクチャー、イベント登壇なども行っています。</p>
-					<p class="u-text-center"><a href="/contact" class="c-btn c-btn_primary">Contact <i class="fa fa-angle-right"></i></a></p>
-				</section>
-
-				<section class="c-card__body">
-					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="#"><span class="dashicons dashicons-admin-tools"></span> Own Services</a></h1>
-					<div class="l-grid">
-						<div class="l-grid__u l-grid__u_medium_1of3">
-
-							<h3>
-								<div class="u-text-center">
-									<span class="fa-stack fa-lg fa-3x">
-										<i class="fa fa-circle fa-stack-2x u-text-primary"></i>
-										<i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-									</span>
-								</div>
-								<div>WEBサイト制作</div>
-							</h3>
-							<p>WordPressやOSSを用いた、使いやすいWEBサイトを制作します。</p>
-						</div>
-						<div class="l-grid__u l-grid__u_medium_1of3">
-
-							<h3>
-								<div  class="u-text-center">
-									<span class="fa-stack fa-lg fa-3x">
-										<i class="fa fa-circle fa-stack-2x u-text-primary"></i>
-										<i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
-									</span>
-								</div>
-								<div>WEBデザイン・フロントエンド開発</div>
-							</h3>
-							<p>WEBデザイン・及びHTML/CSSフロントエンドの開発、レスポンシブウェブデザインなどをご提案します。</p>
-
-						</div>
-						<div class="l-grid__u l-grid__u_medium_1of3">
-
-							<h3>
-								<div class="u-text-center">
-								<span class="fa-stack fa-lg fa-3x">
-									<i class="fa fa-circle fa-stack-2x u-text-primary"></i>
-									<i class="fa fa-wordpress fa-stack-1x fa-inverse"></i>
-								</span>
-								</div>
-								<div>WordPress プラグイン・テーマ開発</div>
-							</h3>
-							<p>WordPressの公式ディレクトリ掲載プラグイン作者、コア貢献者の経験を生かした、プラグイン・テーマの制作をいたします。</p>
-						</div>
-					</div>
-
-				</section>
-
-			</div>
 
 			<div class="c-card">
 				<section class="c-card__body">
