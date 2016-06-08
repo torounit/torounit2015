@@ -33,6 +33,7 @@ class Assets {
 		}
 
 		add_editor_style( $this->css_path );
+		add_editor_style( '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
 	}
 
 

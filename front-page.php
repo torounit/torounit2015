@@ -8,7 +8,9 @@
 get_header(); ?>
 	<div class="l-row l-row_content">
 		<main class="l-main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
-
+			<?php if (have_posts()) : the_post(); ?>
+				<?php the_content();?>
+			<?php endif;?>
 			<div class="c-card">
 				<section class="c-card__body">
 					<h1 class="u-text-center"><a class="u-text-large u-text-color-inherit" href="#"><span class="dashicons dashicons-lightbulb"></span> Works</a></h1>
