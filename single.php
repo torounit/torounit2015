@@ -50,8 +50,9 @@ get_header(); ?>
 
 
 								<div class="content p-article__body" itemprop="articleBody">
-									<?php if ( has_post_thumbnail() ) {
-										the_post_thumbnail();
+									<?php 
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail( 'post-thumbnail', [ 'itemprop' => 'image', 'class' => 'p-article__thumbnail' ] );
 									} ?>
 									<?php the_content(); ?>
 									<div class="p-article__pagenav"><?php wp_link_pages(); ?></div>
