@@ -23,12 +23,14 @@ before_script:
   - nvm install 5
   - npm install
   - npm run build
+  - bash ./bin/install-phpcs.sh
 
 script:
   - ls -al assets/dist/styles/all.min.css
   - ls -al assets/dist/scripts/all.min.js
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
+  - $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php;
 
 after_success:
   - bash ./bin/deploy.sh
