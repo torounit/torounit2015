@@ -18,6 +18,7 @@ git clone -b dist --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" dist
 npm run dist
 
 cd dist
+rm vendor -rf
 
 git add -A
 git commit -m "Update from travis $TRAVIS_COMMIT"
