@@ -3,7 +3,10 @@
 	// border: 10px solid transparent;
 	// border-image: image-url("border.png") 10;
 	padding: 16px;
-	margin: 16px 0;
+	margin: 8px 0;
+	@media #{$medium-up} {
+		margin: 16px 0;
+	}
 	background-color: #fff;
 	//border-width: 1px;
 	//border-style: solid;
