@@ -1,6 +1,9 @@
 .l-row {
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 0 20px;
+	padding: 0 8px;
 	box-sizing: border-box;
+	@media #{$medium-up} {
+		padding: 0 16px;
+	}
 }
