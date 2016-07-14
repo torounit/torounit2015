@@ -30,6 +30,7 @@ body {
 	text-align: justify;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
+	word-break: break-all;
 
 	@include pie-clearfix();
 	letter-spacing: 0.05rem;
