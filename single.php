@@ -52,7 +52,6 @@ get_header(); ?>
 									<?php if ( has_post_thumbnail() ) {
 										the_post_thumbnail( 'post-thumbnail', [ 'itemprop' => 'image', 'class' => 'p-article__thumbnail' ] );
 									} ?>
-									1
 									<ins id="adsbygoogle-before-content" style="display: none;" class="adsbygoogle-placeholder"></ins>
 									<?php the_content(); ?>
 									<div class="p-article__pagenav"><?php wp_link_pages(); ?></div>
