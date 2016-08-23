@@ -11,6 +11,8 @@ get_header(); ?>
 			<?php if ( have_posts() ) : the_post(); ?>
 				<?php the_content();?>
 			<?php endif;?>
+			
+			<ins id="adsbygoogle-before-blog" style="display: none;" class="adsbygoogle-placeholder"></ins>
 
 			<div class="c-card">
 				<section class="c-card__body">
@@ -44,6 +46,8 @@ get_header(); ?>
 				</section>
 
 			</div>
+
+			<ins id="adsbygoogle-before-plugin" style="display: none;" class="adsbygoogle-placeholder"></ins>
 
 			<div class="c-card">
 				<section class="c-card__body">
@@ -83,7 +87,8 @@ get_header(); ?>
 				</section>
 
 			</div>
-
+			
+			<ins id="adsbygoogle-after-plugin" style="display: none;" class="adsbygoogle-placeholder"></ins>
 		</main>
 	</div>
 
