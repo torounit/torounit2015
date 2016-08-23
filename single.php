@@ -52,17 +52,19 @@ get_header(); ?>
 									<?php if ( has_post_thumbnail() ) {
 										the_post_thumbnail( 'post-thumbnail', [ 'itemprop' => 'image', 'class' => 'p-article__thumbnail' ] );
 									} ?>
-									<ins id="adsbygoogle-before-content" style="display: none;" class="adsbygoogle-placeholder"></ins>
+									
+									<div>
+										<ins id="adsbygoogle-before-content" style="display: none;" class="adsbygoogle-placeholder"></ins>	
+									</div>
+									
 									<?php the_content(); ?>
 									<div class="p-article__pagenav"><?php wp_link_pages(); ?></div>
-									<ins id="adsbygoogle-after-content" style="display: none;" class="adsbygoogle-placeholder"></ins>
+									
+									<div>
+										<ins id="adsbygoogle-after-content" style="display: none;" class="adsbygoogle-placeholder"></ins>
+									</div>
+									
 								</div>
-
-								<aside>
-									<ins id="ad-articlebody-after"
-									     style="display: none;"
-									     class="adsbygoogle-placeholder"></ins>
-								</aside>
 
 								<?php if ( comments_open() ) : ?>
 									<div class="p-article__comment" itemscope itemprop="comment"
