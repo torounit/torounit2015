@@ -6,8 +6,6 @@
  */
 
 get_header(); ?>
-	<div class="l-row">
-		<div class="c-card">
 			<div class="c-card__body">
 
 				<nav class="p-breadcrumbs" itemprop="breadcrumb">
@@ -83,8 +81,5 @@ get_header(); ?>
 
 			</div>
 
-
-		</div>
-	</div>
 
 <?php get_footer(); ?>
