@@ -73,4 +73,8 @@
 
 		</div>
 	</div>
+	<div class="l-row">
+		<?php if( is_front_page() ): ?>
+		<div class="c-card">
+		<?php endif;?>
 

@@ -1,0 +1,12 @@
+.c-divider {
+	border: none;
+	border-top: 1px solid rgba(#555,.14);
+	margin: 16px 0;
+	@media #{$medium-up} {
+		margin: 24px 0;
+
+	}
+	@media #{$large-up} {
+		margin: 32px 0;
+	}
+}
