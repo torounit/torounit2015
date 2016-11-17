@@ -7,11 +7,18 @@
 
 ?>
 
-<?php if ( is_front_page() ) :  ?>
 	</div>
-<?php endif; ?>
 
 </div>
+
+<?php if ( is_front_page() ) : ?>
+	<div class="l-row">
+		<?php get_template_part( 'partial/blog-card' );?>
+
+		<?php get_template_part( 'partial/plugin-card' );?>
+	</div>
+<?php endif;?>
+
 <footer class="l-WPFooter l-row" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="c-card">
 		<div class="c-card__body">
