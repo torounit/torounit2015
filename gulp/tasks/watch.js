@@ -25,6 +25,7 @@ gulp.task('setWatch', function () {
 gulp.task('watch', function () {
 	watch(config.sass.src, function () {
 		gulp.start('sass');
+		gulp.start('aigis');
 	});
 	watch(config.images.src, function () {
 		gulp.start('images');

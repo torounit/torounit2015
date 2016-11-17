@@ -1,3 +1,26 @@
+
+/*
+---
+name: base button
+category: object/component/button
+---
+
+## This is base button
+
+* Base button style.
+
+```html
+<a class="c-btn">Button</a>
+```
+
+* Primary Style.
+
+```html
+<a class="c-btn c-btn_primary">Button</a>
+```
+
+*/
+
 .c-btn {
 	display: inline-block;
 	padding: 8px 16px;
