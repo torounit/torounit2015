@@ -76,4 +76,10 @@
 	<div class="l-row">
 
 		<div class="c-card">
+			<nav class="p-breadcrumbs" itemprop="breadcrumb">
+				<?php if ( function_exists( 'bread_crumb' ) ) {
+					bread_crumb( [ 'type' => 'string', 'home_label' => '<i class="fa fa-home"></i>' ] );
+				} ?>
+			</nav>
 
+			<hr class="c-divider">
