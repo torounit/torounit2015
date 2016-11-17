@@ -13,9 +13,9 @@ get_header(); ?>
 			bread_crumb( [ 'type' => 'string', 'home_label' => '<i class="fa fa-home"></i>' ] );
 		} ?>
 	</nav>
-</div>
 
-<div class="c-card__body">
+	<hr class="c-devider">
+
 	<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
 		<section>

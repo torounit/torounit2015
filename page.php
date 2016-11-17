@@ -15,8 +15,7 @@ get_header();?>
 		} ?>
 	</nav>
 
-</div>
-<div class="c-card__body">
+	<hr class="c-devider">
 
 	<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 		<?php if ( have_posts() ) :the_post();?>
