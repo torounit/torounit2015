@@ -5,3 +5,4 @@ assets/dist
 docs/styleguide
 dist
 styleguide
+*.diff
