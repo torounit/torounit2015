@@ -6,9 +6,11 @@
  */
 
 ?>
-	<?php if( is_front_page() ): ?>
+
+<?php if ( is_front_page() ) :  ?>
 	</div>
-	<?php endif;?>
+<?php endif; ?>
+
 </div>
 <footer class="l-WPFooter l-row" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="c-card">
@@ -20,7 +22,8 @@
 				<div class="c-media__body">
 					<h3 class="p-profile__title c-media__heading">Toro_Unit</h3>
 
-					<p><span itemprop="jobTitle">Web Designer</span> / <span itemprop="jobTitle">Front-end Engineer</span> /
+					<p><span itemprop="jobTitle">Web Designer</span> / <span
+							itemprop="jobTitle">Front-end Engineer</span> /
 						<span itemprop="jobTitle">WordPress Plugin Developer</span>.</p>
 
 					<p class="p-socialProfile">
