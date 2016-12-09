@@ -2,7 +2,7 @@
 	<div class="l-row l-row_content">
 		<main class="l-main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
-				<article class="p-article c-card">
+				<article class="p-article">
 					<header class="p-article__header">
 						<h1 class="p-article__title"><a href="<?php the_permalink();?>">404 Not Found.</a></h1>
 					</header>
